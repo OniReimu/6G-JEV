@@ -1,0 +1,6 @@
+# Direct dependencies for analysis and experiment plots; not a historical lockfile.
+matplotlib
+numpy
+scipy
+PyYAML
+Pillow

@@ -1,0 +1,26 @@
+# Environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Credentials
+.env
+*.env
+!*.env.example
+
+# Run outputs, downloads, simulator builds, and regenerated assets
+/runs/
+/out/
+/.cache/
+/c2-runs
+/c2-inputs
+/c2-records
+/c2-selected
+/c2-check-runs/
+/ns-3.48/
+/paper_assets/figures/
+/paper_assets/tables/
+/PROVENANCE.json

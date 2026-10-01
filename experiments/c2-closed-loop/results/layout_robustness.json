@@ -1,0 +1,153 @@
+{
+  "rule": "D-10",
+  "design_point": "dp_r0p3_s30_u5",
+  "selected_run_ids": {
+    "oracle": "rq1_e_r0p3_s30_oracle",
+    "no-update": "rq1_e_r0p3_s30_no_update",
+    "Jev-1.13.0": "rq1_e_r0p3_s30_l_jev_1_13_0",
+    "DeepSeek-V4.1-Flash": "rq1_e_r0p3_s30_l_deepseek_v4_1_flash",
+    "GLM-5.3-Flash": "rq1_e_r0p3_s30_l_glm_5_3_flash",
+    "Qwen3.8-Flash": "rq1_e_r0p3_s30_l_qwen3_8_flash"
+  },
+  "binary_sha256": "7e2268c1a756673a6367beb2cdd759c51568fa35d30233b7f379ee2d9e943221",
+  "realizations": [
+    {
+      "name": "production",
+      "root": "c2-runs/cluster-a",
+      "run_status_by_arm": {
+        "oracle": "PASS",
+        "no-update": "PASS",
+        "Jev-1.13.0": "PASS",
+        "DeepSeek-V4.1-Flash": "PASS",
+        "GLM-5.3-Flash": "PASS",
+        "Qwen3.8-Flash": "PASS"
+      },
+      "estimates": {
+        "C-1": 0.039554127811132,
+        "DeepSeek-V4.1-Flash vs Jev-1.13.0": 0.0002865579637195985,
+        "GLM-5.3-Flash vs Jev-1.13.0": -0.024478449331252,
+        "Qwen3.8-Flash vs Jev-1.13.0": -0.009788021803011523
+      }
+    },
+    {
+      "name": "layout_1",
+      "root": "c2-runs/cluster-a-layout/p00",
+      "run_status_by_arm": {
+        "oracle": "PASS",
+        "no-update": "PASS",
+        "Jev-1.13.0": "PASS",
+        "DeepSeek-V4.1-Flash": "PASS",
+        "GLM-5.3-Flash": "PASS",
+        "Qwen3.8-Flash": "PASS"
+      },
+      "estimates": {
+        "C-1": 0.039201466288257714,
+        "DeepSeek-V4.1-Flash vs Jev-1.13.0": 0.005594229023162619,
+        "GLM-5.3-Flash vs Jev-1.13.0": -0.01954949428815454,
+        "Qwen3.8-Flash vs Jev-1.13.0": -0.01268140548630934
+      }
+    },
+    {
+      "name": "layout_2",
+      "root": "c2-runs/cluster-a-layout/p16xxxxxxxxxxxxx",
+      "run_status_by_arm": {
+        "oracle": "PASS",
+        "no-update": "PASS",
+        "Jev-1.13.0": "PASS",
+        "DeepSeek-V4.1-Flash": "PASS",
+        "GLM-5.3-Flash": "PASS",
+        "Qwen3.8-Flash": "PASS"
+      },
+      "estimates": {
+        "C-1": 0.03381003655206529,
+        "DeepSeek-V4.1-Flash vs Jev-1.13.0": 0.021246652756788456,
+        "GLM-5.3-Flash vs Jev-1.13.0": 0.0037793301464992793,
+        "Qwen3.8-Flash vs Jev-1.13.0": 0.012955544402623875
+      }
+    },
+    {
+      "name": "layout_3",
+      "root": "c2-runs/cluster-a-layout/p32xxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "run_status_by_arm": {
+        "oracle": "PASS",
+        "no-update": "PASS",
+        "Jev-1.13.0": "PASS",
+        "DeepSeek-V4.1-Flash": "PASS",
+        "GLM-5.3-Flash": "PASS",
+        "Qwen3.8-Flash": "PASS"
+      },
+      "estimates": {
+        "C-1": 0.032381835857333716,
+        "DeepSeek-V4.1-Flash vs Jev-1.13.0": 0.015021373040158546,
+        "GLM-5.3-Flash vs Jev-1.13.0": -0.011644518361799664,
+        "Qwen3.8-Flash vs Jev-1.13.0": 0.009813918373007635
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "contrast": "C-1",
+      "production_estimate": 0.039554127811132,
+      "estimates_by_realization": {
+        "production": 0.039554127811132,
+        "layout_1": 0.039201466288257714,
+        "layout_2": 0.03381003655206529,
+        "layout_3": 0.032381835857333716
+      },
+      "range_min": 0.032381835857333716,
+      "range_max": 0.039554127811132,
+      "range": 0.007172291953798288,
+      "sign_differs": false,
+      "range_exceeds_production": false,
+      "not_robust": false
+    },
+    {
+      "contrast": "DeepSeek-V4.1-Flash vs Jev-1.13.0",
+      "production_estimate": 0.0002865579637195985,
+      "estimates_by_realization": {
+        "production": 0.0002865579637195985,
+        "layout_1": 0.005594229023162619,
+        "layout_2": 0.021246652756788456,
+        "layout_3": 0.015021373040158546
+      },
+      "range_min": 0.0002865579637195985,
+      "range_max": 0.021246652756788456,
+      "range": 0.02096009479306886,
+      "sign_differs": false,
+      "range_exceeds_production": true,
+      "not_robust": true
+    },
+    {
+      "contrast": "GLM-5.3-Flash vs Jev-1.13.0",
+      "production_estimate": -0.024478449331252,
+      "estimates_by_realization": {
+        "production": -0.024478449331252,
+        "layout_1": -0.01954949428815454,
+        "layout_2": 0.0037793301464992793,
+        "layout_3": -0.011644518361799664
+      },
+      "range_min": -0.024478449331252,
+      "range_max": 0.0037793301464992793,
+      "range": 0.02825777947775128,
+      "sign_differs": true,
+      "range_exceeds_production": true,
+      "not_robust": true
+    },
+    {
+      "contrast": "Qwen3.8-Flash vs Jev-1.13.0",
+      "production_estimate": -0.009788021803011523,
+      "estimates_by_realization": {
+        "production": -0.009788021803011523,
+        "layout_1": -0.01268140548630934,
+        "layout_2": 0.012955544402623875,
+        "layout_3": 0.009813918373007635
+      },
+      "range_min": -0.01268140548630934,
+      "range_max": 0.012955544402623875,
+      "range": 0.025636949888933214,
+      "sign_differs": true,
+      "range_exceeds_production": true,
+      "not_robust": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+D-16 AnyJev-L0 RQ3 replays from the D-12 idle load traces
+rows from c2-inputs/c2-prod-v1-rq3-d16/matrix.csv sha256 540b7a55f5e24ecf306d8adedefa2433b046957894f49bc91bd7bfd92502ffc6: rq3_e_r0p1_s30_n_anyjev_l0 rq3_e_r0p5_s30_n_anyjev_l0 rq3_e_r1_s30_n_anyjev_l0 rq3_e_r2_s30_n_anyjev_l0 rq3_scale_e_r1_s30_n_anyjev_l0
+D-17 platform-matched selection (select_runs --restrict); copies under every other root EXCLUDED
+  rq3_e_r0p1_s30_n_anyjev_l0=c2-runs/rq3-d18-m4
+  rq3_e_r0p1_s30_n_deepseek_v4_1_flash=c2-runs/rq3-d18-m4
+  rq3_e_r0p1_s30_n_glm_5_3_flash=c2-runs/rq3-d18-m4
+  rq3_e_r0p1_s30_n_jev_1_13_0=c2-runs/rq3-d18-m4
+  rq3_e_r0p1_s30_n_qwen3_5_4b_json=c2-runs/rq3-d18-m4
+  rq3_e_r0p1_s30_n_semif_qwen3_5_4b=c2-runs/rq3-d18-m4
+  rq3_e_r0p1_s30_n_qwen3_8_flash=c2-runs/rq3-r0p1-m4-d7b
+  rq3_scale_e_r1_s30_n_anyjev_l0=c2-runs/cluster-b-rq3-d17
+  rq3_scale_e_r1_s30_n_deepseek_v4_1_flash=c2-runs/cluster-b-rq3
+  rq3_scale_e_r1_s30_n_glm_5_3_flash=c2-runs/cluster-b-rq3
+  rq3_scale_e_r1_s30_n_jev_1_13_0=c2-runs/cluster-b-rq3
+  rq3_scale_e_r1_s30_n_qwen3_5_4b_json=c2-runs/cluster-b-rq3
+  rq3_scale_e_r1_s30_n_qwen3_8_flash=c2-runs/cluster-b-rq3
+  rq3_scale_e_r1_s30_n_semif_qwen3_5_4b=c2-runs/cluster-b-rq3
+  rq3_e_r0p5_s30_n_anyjev_l0=c2-runs/cluster-a-rq3-d17
+  rq3_e_r1_s30_n_anyjev_l0=c2-runs/cluster-a-rq3-d17
+  rq3_e_r2_s30_n_anyjev_l0=c2-runs/cluster-a-rq3-d17

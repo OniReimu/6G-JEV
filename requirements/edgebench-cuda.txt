@@ -1,0 +1,97 @@
+# CUDA environment for the self-hosted SemIf server (paper runs: one NVIDIA H100 NVL, driver 580 / CUDA 13.0,
+# glibc 2.28). Exact pins for Python 3.13 on x86_64-manylinux_2_28, resolved with:
+#   uv pip compile <direct pins> --python-version 3.13 --python-platform x86_64-manylinux_2_28 \
+#     --index-strategy unsafe-best-match
+# Direct pins: torch 2.13.0+cu132, transformers 5.17.0, accelerate 1.12.0, safetensors 0.8.0,
+#   tokenizers 0.23.2, huggingface-hub 1.31.0, laya 0.3.11, outlines 1.3.3 (+ outlines-core 0.2.14),
+#   jsonschema 4.26.0, numpy 2.2.6, scipy 1.18.1, pandas 3.0.6, tiktoken 0.14.0, sentencepiece 0.2.1,
+#   protobuf 7.36.1. Everything else below is transitive.
+# Install:
+#   uv pip install --python <venv>/bin/python --index-strategy unsafe-best-match -r requirements/edgebench-cuda.txt
+# SemIf (semif-phase1) is NOT listed here: its pyproject pins torch==2.10.0, which conflicts with the
+# CUDA 13 torch above. Install it without dependencies:
+#   uv pip install --python <venv>/bin/python --no-deps \
+#     "semif-phase1 @ git+https://github.com/TheoLeeCJ/SemIf-OpenJev@23cf1f39fc9534fe81437200959b6dfc7106e45a"
+# (all of its other dependencies are pinned here at the same versions as its pyproject).
+--extra-index-url https://download.pytorch.org/whl/cu132
+accelerate==1.12.0
+annotated-doc==0.0.5
+annotated-types==0.8.0
+anyio==4.15.1
+attrs==26.1.0
+certifi==2026.7.22
+charset-normalizer==3.5.1
+click==8.5.0
+cloudpickle==3.1.2
+cuda-bindings==13.4.3
+cuda-pathfinder==1.8.2
+cuda-toolkit==13.2.1
+diskcache==5.6.3
+filelock==4.0.2
+fsspec==2026.9.0
+genson==1.4.0
+h11==0.16.0
+hf-xet==1.6.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface-hub==1.31.0
+idna==3.20
+jinja2==3.1.6
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+laya==0.3.11
+markdown-it-py==4.2.0
+markupsafe==3.0.3
+mdurl==0.1.2
+mpmath==1.3.0
+networkx==3.7
+numpy==2.2.6
+nvidia-cublas==13.4.0.1
+nvidia-cuda-cupti==13.2.75
+nvidia-cuda-nvrtc==13.2.78
+nvidia-cuda-runtime==13.2.75
+nvidia-cudnn-cu13==9.20.0.48
+nvidia-cufft==12.2.0.46
+nvidia-cufile==1.17.1.22
+nvidia-curand==10.4.2.55
+nvidia-cusolver==12.2.0.1
+nvidia-cusparse==12.7.10.1
+nvidia-cusparselt-cu13==0.8.1
+nvidia-nccl-cu13==2.29.7
+nvidia-nvjitlink==13.4.92
+nvidia-nvshmem-cu13==3.4.5
+nvidia-nvtx==13.2.75
+outlines==1.3.3
+outlines-core==0.2.14
+packaging==26.3
+pandas==3.0.6
+pillow==12.3.0
+protobuf==7.36.1
+psutil==7.2.2
+pydantic==2.13.5
+pydantic-core==2.46.5
+pygments==2.21.0
+python-dateutil==2.9.0.post0
+pyyaml==6.0.3
+referencing==0.37.0
+regex==2026.9.10
+requests==2.34.2
+rich==15.0.0
+rpds-py==2026.6.3
+safetensors==0.8.0
+scipy==1.18.1
+sentencepiece==0.2.1
+setuptools==84.0.0
+shellingham==1.5.4
+six==1.17.0
+sympy==1.14.0
+tiktoken==0.14.0
+tokenizers==0.23.2
+torch==2.13.0+cu132
+tqdm==4.70.1
+transformers==5.17.0
+triton==3.7.1
+typer==0.27.2
+typing-extensions==4.16.0
+typing-inspection==0.4.4
+urllib3==2.8.0

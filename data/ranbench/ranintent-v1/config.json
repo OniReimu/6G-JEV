@@ -1,0 +1,159 @@
+{
+  "name": "RANIntent v1",
+  "experiment": "EXP-2026-003",
+  "base_seed": 20260925,
+  "policy_type_id": 20001,
+  "splits": {
+    "test": {
+      "state_dependent": 150,
+      "named_scope": 150
+    },
+    "dev": {
+      "state_dependent": 30,
+      "named_scope": 30
+    }
+  },
+  "cell_counts": [
+    3,
+    7,
+    21,
+    57
+  ],
+  "qualities": [
+    "fresh",
+    "stale",
+    "noisy",
+    "contradictory"
+  ],
+  "verify_condition": {
+    "cells": 21,
+    "quality": "fresh"
+  },
+  "pool": {
+    "cells": 21,
+    "quality": "fresh",
+    "split": "test",
+    "half": "named_scope"
+  },
+  "c2_class_map": {
+    "emergency_video": "video",
+    "video_streaming": "video",
+    "xr_gaming": "xr",
+    "factory_control": "xr",
+    "iot_metering": "iot",
+    "mission_voice": "iot",
+    "analytics_offload": "be",
+    "best_effort": "be"
+  },
+  "issuers": {
+    "operator_share": 0.5,
+    "operator": {
+      "display_name": "the network operator's operations team",
+      "owned_classes": "all",
+      "may_set_critical": true
+    },
+    "tenants": {
+      "civic_safety": {
+        "display_name": "Civic Safety Agency",
+        "owned_classes": [
+          "emergency_video",
+          "mission_voice"
+        ],
+        "may_set_critical": true
+      },
+      "lumen_media": {
+        "display_name": "Lumen Media",
+        "owned_classes": [
+          "video_streaming",
+          "xr_gaming"
+        ],
+        "may_set_critical": false
+      },
+      "axis_robotics": {
+        "display_name": "Axis Robotics",
+        "owned_classes": [
+          "factory_control",
+          "iot_metering"
+        ],
+        "may_set_critical": false
+      },
+      "datacrest": {
+        "display_name": "Datacrest Analytics",
+        "owned_classes": [
+          "analytics_offload"
+        ],
+        "may_set_critical": false
+      }
+    }
+  },
+  "telemetry": {
+    "stale_after_s": 10,
+    "fresh_age_s": [
+      0,
+      8
+    ],
+    "stale_age_s": [
+      12,
+      900
+    ],
+    "extra_row_share": 1.0,
+    "decoy_probability": 0.8,
+    "prb_util_pct": {
+      "extreme": [
+        86.0,
+        96.0
+      ],
+      "others_min": 15.0,
+      "margin": 8.0,
+      "noise": 3.0
+    },
+    "edge_ue_thr_mbps": {
+      "extreme": [
+        0.4,
+        2.0
+      ],
+      "others_max": 35.0,
+      "margin": 3.0,
+      "noise": 1.0
+    },
+    "dl_thr_mbps": {
+      "range": [
+        40.0,
+        650.0
+      ],
+      "noise": 25.0
+    },
+    "p95_delay_ms": {
+      "base": 6.0,
+      "per_prb_pct": 0.5,
+      "jitter": [
+        0.0,
+        12.0
+      ],
+      "noise": 4.0
+    }
+  },
+  "text": {
+    "min_words": 6,
+    "max_words": 80,
+    "max_words_long": 120,
+    "long_wording_families": [
+      "email",
+      "formal SLA clause"
+    ],
+    "wording_families": [
+      "operator ticket",
+      "NOC chat message",
+      "formal SLA clause",
+      "exposure API request note",
+      "voice-assistant utterance",
+      "email"
+    ],
+    "max_opening_4gram_share": 0.05,
+    "max_5gram_share": 0.1
+  },
+  "tokens": {
+    "estimate_encoding": "cl100k_base",
+    "laya_context_tokens": 1024
+  }
+}

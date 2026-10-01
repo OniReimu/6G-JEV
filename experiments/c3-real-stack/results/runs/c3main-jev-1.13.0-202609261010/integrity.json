@@ -1,0 +1,52 @@
+{
+  "a1_acknowledgements": 30,
+  "actual_decisions": 30,
+  "actuated_decisions": 30,
+  "errors": [],
+  "expected_decisions": 30,
+  "interpreter": "Jev-1.13.0",
+  "invalid_decisions": 0,
+  "iperf3_intervals": 118,
+  "run_id": "c3main-jev-1.13.0-202609261010",
+  "sources": {
+    "a1": "experiments/c3-real-stack/results/runs/c3main-jev-1.13.0-202609261010/records.a1.jsonl",
+    "gnb": "experiments/c3-real-stack/results/runs/c3main-jev-1.13.0-202609261010/gnb.log",
+    "iperf3": "experiments/c3-real-stack/results/runs/c3main-jev-1.13.0-202609261010/iperf3.json",
+    "records": "experiments/c3-real-stack/results/runs/c3main-jev-1.13.0-202609261010/records.jsonl",
+    "xapp": "experiments/c3-real-stack/results/runs/c3main-jev-1.13.0-202609261010/xapp.jsonl"
+  },
+  "status": "PASS",
+  "strict_gnb_exchanges": 30,
+  "summary": {
+    "delta_a1_s": {
+      "max_s": 0.021015644073486328,
+      "median_s": 0.016631364822387695,
+      "min_s": 0.01339268684387207,
+      "n": 30,
+      "null_count": 0
+    },
+    "delta_e2_s": {
+      "max_s": 0.006433010101318359,
+      "median_s": 0.0024329423904418945,
+      "min_s": 0.0009500980377197266,
+      "n": 30,
+      "null_count": 0
+    },
+    "ell_s": {
+      "max_s": 0.6000563325360417,
+      "median_s": 0.28556385450065136,
+      "min_s": 0.24061366636306047,
+      "n": 30,
+      "null_count": 0
+    },
+    "kpm_change_upper_bound_s": {
+      "max_s": 2.718003988265991,
+      "median_s": 1.346725583076477,
+      "min_s": 0.0012481212615966797,
+      "n": 30,
+      "null_count": 0
+    }
+  },
+  "unactuatable_decisions": 0,
+  "xapp_controls": 30
+}

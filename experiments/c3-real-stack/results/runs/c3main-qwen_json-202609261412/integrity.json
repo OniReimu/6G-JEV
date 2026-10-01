@@ -1,0 +1,52 @@
+{
+  "a1_acknowledgements": 30,
+  "actual_decisions": 30,
+  "actuated_decisions": 30,
+  "errors": [],
+  "expected_decisions": 30,
+  "interpreter": "Qwen3.5-4B-JSON",
+  "invalid_decisions": 0,
+  "iperf3_intervals": 143,
+  "run_id": "c3main-qwen_json-202609261412",
+  "sources": {
+    "a1": "experiments/c3-real-stack/results/runs/c3main-qwen_json-202609261412/records.a1.jsonl",
+    "gnb": "experiments/c3-real-stack/results/runs/c3main-qwen_json-202609261412/gnb.log",
+    "iperf3": "experiments/c3-real-stack/results/runs/c3main-qwen_json-202609261412/iperf3.json",
+    "records": "experiments/c3-real-stack/results/runs/c3main-qwen_json-202609261412/records.jsonl",
+    "xapp": "experiments/c3-real-stack/results/runs/c3main-qwen_json-202609261412/xapp.jsonl"
+  },
+  "status": "PASS",
+  "strict_gnb_exchanges": 30,
+  "summary": {
+    "delta_a1_s": {
+      "max_s": 0.021608829498291016,
+      "median_s": 0.01771402359008789,
+      "min_s": 0.013251543045043945,
+      "n": 30,
+      "null_count": 0
+    },
+    "delta_e2_s": {
+      "max_s": 0.006432771682739258,
+      "median_s": 0.002781987190246582,
+      "min_s": 0.0012581348419189453,
+      "n": 30,
+      "null_count": 0
+    },
+    "ell_s": {
+      "max_s": 0.5163082089275122,
+      "median_s": 0.4323519580066204,
+      "min_s": 0.4126097084954381,
+      "n": 30,
+      "null_count": 0
+    },
+    "kpm_change_upper_bound_s": {
+      "max_s": 5.817600965499878,
+      "median_s": 1.2468630075454712,
+      "min_s": 0.20531797409057617,
+      "n": 30,
+      "null_count": 0
+    }
+  },
+  "unactuatable_decisions": 0,
+  "xapp_controls": 30
+}

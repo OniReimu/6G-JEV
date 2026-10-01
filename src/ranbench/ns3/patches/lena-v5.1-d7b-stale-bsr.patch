@@ -1,0 +1,87 @@
+--- a/model/nr-ue-mac.cc
++++ b/model/nr-ue-mac.cc
+@@ -434,6 +434,17 @@
+ NrUeMac::DoTransmitBufferStatusReport(NrMacSapProvider::BufferStatusReportParameters params)
+ {
+     NS_LOG_FUNCTION(this << static_cast<uint32_t>(params.lcid));
++
++    if (m_lcInfoMap.find(params.lcid) == m_lcInfoMap.end())
++    {
++        // EXP-2026-003 patch (D-7b): a report for a logical channel whose context was removed
++        // (a late RLC report after a MAC reset on connection failure). v5.1 stored it, and the
++        // next UL grant aborted in unordered_map::at (SendTxData) or dereferenced end() in
++        // SendBufferStatusReport. The report is ignored. One stderr line per occurrence.
++        std::cerr << "EXP2026003_PATCH_D7B imsi=" << m_imsi << " t=" << Simulator::Now().GetSeconds()
++                  << " site=DoTransmitBufferStatusReport lcid=" << +params.lcid << std::endl;
++        return;
++    }
+ 
+     auto it = m_ulBsrReceived.find(params.lcid);
+ 
+@@ -990,7 +1001,20 @@
+                                                     "of "
+                                                  << bytesPerLcId << " B for a RETX PDU");
+ 
+-            m_lcInfoMap.at(bsr.lcid).macSapUser->NotifyTxOpportunity(txParams);
++            auto lcInfoIt = m_lcInfoMap.find(bsr.lcid);
++            if (lcInfoIt == m_lcInfoMap.end())
++            {
++                // EXP-2026-003 patch (D-7b): a buffer status report is still held for a logical channel
++                // whose context was removed (a MAC reset after a connection failure, followed by a late
++                // report). v5.1 threw std::out_of_range from unordered_map::at here and aborted the
++                // simulation. The stale report gets no transmission opportunity; the grant goes to the
++                // remaining channels. One stderr line per occurrence, so every run can report its count.
++                std::cerr << "EXP2026003_PATCH_D7B imsi=" << m_imsi
++                          << " t=" << Simulator::Now().GetSeconds() << " site=SendRetxData lcid=" << +bsr.lcid
++                          << std::endl;
++                continue;
++            }
++            lcInfoIt->second.macSapUser->NotifyTxOpportunity(txParams);
+             // After this call, m_ulDciTotalUsed has been updated with the
+             // correct amount of bytes... but it is up to us in updating the BSR
+             // value, subtracting the amount of bytes transmitted
+@@ -1101,7 +1125,21 @@
+                                              << " of a TxOpp "
+                                                 "of "
+                                              << bytesPerLcId << " B for a TX PDU");
+-        m_lcInfoMap.at(bsr.lcid).macSapUser->NotifyTxOpportunity(txParams);
++        auto lcInfoIt = m_lcInfoMap.find(bsr.lcid);
++        if (lcInfoIt == m_lcInfoMap.end())
++        {
++            // EXP-2026-003 patch (D-7b): a buffer status report is still held for a logical channel
++            // whose context was removed (a MAC reset after a connection failure, followed by a late
++            // report). v5.1 threw std::out_of_range from unordered_map::at here and aborted the
++            // simulation. The stale report gets no transmission opportunity; the grant goes to the
++            // remaining channels. One stderr line per occurrence, so every run can report its count.
++            std::cerr << "EXP2026003_PATCH_D7B imsi=" << m_imsi
++                      << " t=" << Simulator::Now().GetSeconds() << " site=SendTxData lcid=" << +bsr.lcid
++                      << std::endl;
++            m_ulBsrReceived.erase(smallestBufferBsrLcid);
++            continue;
++        }
++        lcInfoIt->second.macSapUser->NotifyTxOpportunity(txParams);
+         // After this call, m_ulDciTotalUsed has been updated with the
+         // correct amount of bytes... but it is up to us in updating the BSR
+         // value, subtracting the amount of bytes transmitted
+@@ -1248,7 +1286,20 @@
+                                                         "of "
+                                                      << bsr.statusPduSize << " B for a status PDU");
+ 
+-                m_lcInfoMap.at(bsr.lcid).macSapUser->NotifyTxOpportunity(txParams);
++                auto lcInfoIt = m_lcInfoMap.find(bsr.lcid);
++                if (lcInfoIt == m_lcInfoMap.end())
++                {
++                    // EXP-2026-003 patch (D-7b): a buffer status report is still held for a logical channel
++                    // whose context was removed (a MAC reset after a connection failure, followed by a late
++                    // report). v5.1 threw std::out_of_range from unordered_map::at here and aborted the
++                    // simulation. The stale report gets no transmission opportunity; the grant goes to the
++                    // remaining channels. One stderr line per occurrence, so every run can report its count.
++                    std::cerr << "EXP2026003_PATCH_D7B imsi=" << m_imsi
++                              << " t=" << Simulator::Now().GetSeconds() << " site=SendNewStatusData lcid=" << +bsr.lcid
++                              << std::endl;
++                    continue;
++                }
++                lcInfoIt->second.macSapUser->NotifyTxOpportunity(txParams);
+                 // After this call, m_ulDciTotalUsed has been updated with the
+                 // correct amount of bytes... but it is up to us in updating the BSR
+                 // value, subtracting the amount of bytes transmitted

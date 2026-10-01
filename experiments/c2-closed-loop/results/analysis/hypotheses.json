@@ -1,0 +1,3550 @@
+{
+  "labels": {
+    "H1": "confirmatory test under the outcome-blinded D-9 and D-10 amendments",
+    "H2": "confirmatory test under the outcome-blinded D-9 and D-10 amendments"
+  },
+  "primary_d10": {
+    "eligibility_rule": "D-9 positive floor resolved under both D-10 block analyses",
+    "H1": {
+      "tested": true,
+      "base_point": "dp_r0p3_s30_u5",
+      "base_point_available": true,
+      "base_point_eligible": true,
+      "result": {
+        "block_s": 48.81676346203054,
+        "n_blocks": 7,
+        "block_10s_s": 10.0,
+        "n_blocks_10s": 33,
+        "primary_B": {
+          "tests": [
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.014545643174304661,
+              "ci_high": 0.015477065271486349,
+              "p_raw": 0.9878,
+              "n": 74,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.021442048517520212,
+              "ci_high": 0.004573521716378863,
+              "p_raw": 0.3586,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.051327542800601124,
+              "ci_high": -0.006275531258789523,
+              "p_raw": 0.0012,
+              "n": 74,
+              "p_holm": 0.0072,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.049373720516243884,
+              "ci_high": -0.010298627925746566,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.02212968081330404,
+              "ci_high": 0.002319061275970905,
+              "p_raw": 0.1162,
+              "n": 74,
+              "p_holm": 0.581,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.024441102756892232,
+              "ci_high": 0.004974120082815741,
+              "p_raw": 0.5556,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.003135345089265253,
+              "ci_high": 0.039711075001549634,
+              "p_raw": 0.1558,
+              "n": 74,
+              "p_holm": 0.6232,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.004598765432098766,
+              "ci_high": 0.019708994708994704,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": false,
+            "GLM-5.3-Flash vs Jev-1.13.0": false,
+            "Qwen3.8-Flash vs Jev-1.13.0": false,
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": false
+          }
+        },
+        "sensitivity_10s": {
+          "tests": [
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.01561975835504867,
+              "ci_high": 0.0162751483704521,
+              "p_raw": 0.9598,
+              "n": 74,
+              "p_holm": 0.9598,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.014689507333960336,
+              "ci_high": 0.0005295975157888433,
+              "p_raw": 0.0724,
+              "n": 100,
+              "p_holm": 0.36200000000000004,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.044237894969760216,
+              "ci_high": -0.00562566719689933,
+              "p_raw": 0.0114,
+              "n": 74,
+              "p_holm": 0.0684,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.038534182854522224,
+              "ci_high": -0.01688412600672453,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.03078612185061207,
+              "ci_high": 0.014718270534452634,
+              "p_raw": 0.4156,
+              "n": 74,
+              "p_holm": 0.8312,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.016900484436198716,
+              "ci_high": 0.0020552657153086835,
+              "p_raw": 0.149,
+              "n": 100,
+              "p_holm": 0.44699999999999995,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.0027599132467964484,
+              "ci_high": 0.03201240667798926,
+              "p_raw": 0.0948,
+              "n": 74,
+              "p_holm": 0.3792,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.006083688180123013,
+              "ci_high": 0.017276806660434258,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": false,
+            "GLM-5.3-Flash vs Jev-1.13.0": false,
+            "Qwen3.8-Flash vs Jev-1.13.0": false,
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": false
+          }
+        },
+        "tests": [
+          {
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.014545643174304661,
+              "ci_high": 0.015477065271486349,
+              "p_raw": 0.9878,
+              "n": 74,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.01561975835504867,
+              "ci_high": 0.0162751483704521,
+              "p_raw": 0.9598,
+              "n": 74,
+              "p_holm": 0.9598,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.021442048517520212,
+              "ci_high": 0.004573521716378863,
+              "p_raw": 0.3586,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.014689507333960336,
+              "ci_high": 0.0005295975157888433,
+              "p_raw": 0.0724,
+              "n": 100,
+              "p_holm": 0.36200000000000004,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.051327542800601124,
+              "ci_high": -0.006275531258789523,
+              "p_raw": 0.0012,
+              "n": 74,
+              "p_holm": 0.0072,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.044237894969760216,
+              "ci_high": -0.00562566719689933,
+              "p_raw": 0.0114,
+              "n": 74,
+              "p_holm": 0.0684,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.049373720516243884,
+              "ci_high": -0.010298627925746566,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.038534182854522224,
+              "ci_high": -0.01688412600672453,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            "resolved_pos": false,
+            "resolved_neg": true
+          },
+          {
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.02212968081330404,
+              "ci_high": 0.002319061275970905,
+              "p_raw": 0.1162,
+              "n": 74,
+              "p_holm": 0.581,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.03078612185061207,
+              "ci_high": 0.014718270534452634,
+              "p_raw": 0.4156,
+              "n": 74,
+              "p_holm": 0.8312,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.024441102756892232,
+              "ci_high": 0.004974120082815741,
+              "p_raw": 0.5556,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.016900484436198716,
+              "ci_high": 0.0020552657153086835,
+              "p_raw": 0.149,
+              "n": 100,
+              "p_holm": 0.44699999999999995,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.003135345089265253,
+              "ci_high": 0.039711075001549634,
+              "p_raw": 0.1558,
+              "n": 74,
+              "p_holm": 0.6232,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.0027599132467964484,
+              "ci_high": 0.03201240667798926,
+              "p_raw": 0.0948,
+              "n": 74,
+              "p_holm": 0.3792,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.004598765432098766,
+              "ci_high": 0.019708994708994704,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.006083688180123013,
+              "ci_high": 0.017276806660434258,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "resolved_pos": true,
+            "resolved_neg": false
+          }
+        ],
+        "holds": {
+          "DeepSeek-V4.1-Flash vs Jev-1.13.0": false,
+          "GLM-5.3-Flash vs Jev-1.13.0": false,
+          "Qwen3.8-Flash vs Jev-1.13.0": false,
+          "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": false
+        }
+      }
+    },
+    "H2": {
+      "complete": true,
+      "n_prespecified_points": 9,
+      "n_complete_points": 9,
+      "complete_points": [
+        "dp_r0p1_s120_u5",
+        "dp_r0p1_s3_u5",
+        "dp_r0p1_s60_u5",
+        "dp_r0p3_s120_u5",
+        "dp_r0p3_s3_u5",
+        "dp_r0p3_s60_u5",
+        "dp_r1_s120_u5",
+        "dp_r1_s3_u5",
+        "dp_r1_s60_u5"
+      ],
+      "result": {
+        "n_eligible": 3,
+        "block_assignments_by_point": {
+          "dp_r0p1_s120_u5": {
+            "block_s": 106.60670594619674,
+            "n_blocks": 9,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p1_s3_u5": {
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p1_s60_u5": {
+            "block_s": 84.65692294408052,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p3_s120_u5": {
+            "block_s": 10.0,
+            "n_blocks": 34,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r0p3_s3_u5": {
+            "block_s": 10.0,
+            "n_blocks": 34,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r0p3_s60_u5": {
+            "block_s": 25.56837853274422,
+            "n_blocks": 13,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r1_s120_u5": {
+            "block_s": 11.71712177678048,
+            "n_blocks": 9,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          "dp_r1_s3_u5": {
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          "dp_r1_s60_u5": {
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          }
+        },
+        "primary_B": {
+          "n_eligible": 3,
+          "tests": [
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": 0.007825414864921488,
+              "ci_high": 0.045121743940053444,
+              "p_raw": 9.999000099990002e-05,
+              "n": 71,
+              "p_holm": 0.0011998800119988001,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.02110486589144767,
+              "ci_high": 0.06317505709415605,
+              "p_raw": 0.0014,
+              "n": 71,
+              "p_holm": 0.014,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": 0.0016664430782397466,
+              "ci_high": 0.047351052520982435,
+              "p_raw": 0.0344,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.05199155741918901,
+              "ci_high": 0.01333061235172275,
+              "p_raw": 0.2892,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.0003672327176791436,
+              "ci_high": 0.010748033662765803,
+              "p_raw": 0.0366,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004464473882282105,
+              "ci_high": 0.013123806373049069,
+              "p_raw": 0.3854,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004335627382551921,
+              "ci_high": 0.01758557322794164,
+              "p_raw": 0.0006,
+              "n": 71,
+              "p_holm": 0.006599999999999999,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025780490342990348,
+              "ci_high": 0.00835075483124301,
+              "p_raw": 0.3156,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.003503470572782108,
+              "ci_high": 0.02000316452789722,
+              "p_raw": 0.2566,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.024684315795615887,
+              "ci_high": 0.005887881271693099,
+              "p_raw": 0.2054,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.009924874503115669,
+              "ci_high": 0.01941224498921896,
+              "p_raw": 0.4852,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.00473958412143869,
+              "ci_high": 0.01105484210653571,
+              "p_raw": 0.5154,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "GLM-5.3-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.8-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": {
+              "share_resolved": 0.0,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            }
+          }
+        },
+        "sensitivity_10s": {
+          "n_eligible": 3,
+          "tests": [
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": -0.000122719414047321,
+              "ci_high": 0.05109220126916111,
+              "p_raw": 0.0518,
+              "n": 71,
+              "p_holm": 0.4662,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.01931661570251932,
+              "ci_high": 0.07904917321950303,
+              "p_raw": 0.0004,
+              "n": 71,
+              "p_holm": 0.0048000000000000004,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": -0.002959749416043413,
+              "ci_high": 0.05805787212040253,
+              "p_raw": 0.0822,
+              "n": 71,
+              "p_holm": 0.6576,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.04913813006023827,
+              "ci_high": 0.013770915941484491,
+              "p_raw": 0.2808,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.00029699927999560043,
+              "ci_high": 0.010741534344561689,
+              "p_raw": 0.0376,
+              "n": 71,
+              "p_holm": 0.376,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004497670928041402,
+              "ci_high": 0.012921082354229346,
+              "p_raw": 0.3856,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004165007654444267,
+              "ci_high": 0.01770425174443031,
+              "p_raw": 0.001,
+              "n": 71,
+              "p_holm": 0.011,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025680938625650142,
+              "ci_high": 0.008472149472149462,
+              "p_raw": 0.321,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.009253110920873752,
+              "ci_high": 0.023328873242227908,
+              "p_raw": 0.4176,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.025288726803167218,
+              "ci_high": 0.009457795507936382,
+              "p_raw": 0.3088,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.010146306403892864,
+              "ci_high": 0.021655825569314117,
+              "p_raw": 0.505,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.003857439980211333,
+              "ci_high": 0.009814344797247626,
+              "p_raw": 0.4548,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.0,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "GLM-5.3-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.8-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": {
+              "share_resolved": 0.0,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            }
+          }
+        },
+        "tests": [
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": 0.007825414864921488,
+              "ci_high": 0.045121743940053444,
+              "p_raw": 9.999000099990002e-05,
+              "n": 71,
+              "p_holm": 0.0011998800119988001,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": -0.000122719414047321,
+              "ci_high": 0.05109220126916111,
+              "p_raw": 0.0518,
+              "n": 71,
+              "p_holm": 0.4662,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.02110486589144767,
+              "ci_high": 0.06317505709415605,
+              "p_raw": 0.0014,
+              "n": 71,
+              "p_holm": 0.014,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.01931661570251932,
+              "ci_high": 0.07904917321950303,
+              "p_raw": 0.0004,
+              "n": 71,
+              "p_holm": 0.0048000000000000004,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "resolved_pos": true,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": 0.0016664430782397466,
+              "ci_high": 0.047351052520982435,
+              "p_raw": 0.0344,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": -0.002959749416043413,
+              "ci_high": 0.05805787212040253,
+              "p_raw": 0.0822,
+              "n": 71,
+              "p_holm": 0.6576,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.05199155741918901,
+              "ci_high": 0.01333061235172275,
+              "p_raw": 0.2892,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.04913813006023827,
+              "ci_high": 0.013770915941484491,
+              "p_raw": 0.2808,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.0003672327176791436,
+              "ci_high": 0.010748033662765803,
+              "p_raw": 0.0366,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.00029699927999560043,
+              "ci_high": 0.010741534344561689,
+              "p_raw": 0.0376,
+              "n": 71,
+              "p_holm": 0.376,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004464473882282105,
+              "ci_high": 0.013123806373049069,
+              "p_raw": 0.3854,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004497670928041402,
+              "ci_high": 0.012921082354229346,
+              "p_raw": 0.3856,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004335627382551921,
+              "ci_high": 0.01758557322794164,
+              "p_raw": 0.0006,
+              "n": 71,
+              "p_holm": 0.006599999999999999,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004165007654444267,
+              "ci_high": 0.01770425174443031,
+              "p_raw": 0.001,
+              "n": 71,
+              "p_holm": 0.011,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "resolved_pos": true,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025780490342990348,
+              "ci_high": 0.00835075483124301,
+              "p_raw": 0.3156,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025680938625650142,
+              "ci_high": 0.008472149472149462,
+              "p_raw": 0.321,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.003503470572782108,
+              "ci_high": 0.02000316452789722,
+              "p_raw": 0.2566,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.009253110920873752,
+              "ci_high": 0.023328873242227908,
+              "p_raw": 0.4176,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.024684315795615887,
+              "ci_high": 0.005887881271693099,
+              "p_raw": 0.2054,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.025288726803167218,
+              "ci_high": 0.009457795507936382,
+              "p_raw": 0.3088,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.009924874503115669,
+              "ci_high": 0.01941224498921896,
+              "p_raw": 0.4852,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.010146306403892864,
+              "ci_high": 0.021655825569314117,
+              "p_raw": 0.505,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.00473958412143869,
+              "ci_high": 0.01105484210653571,
+              "p_raw": 0.5154,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.003857439980211333,
+              "ci_high": 0.009814344797247626,
+              "p_raw": 0.4548,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          }
+        ],
+        "holds": {
+          "DeepSeek-V4.1-Flash vs Jev-1.13.0": {
+            "share_resolved": 0.0,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          },
+          "GLM-5.3-Flash vs Jev-1.13.0": {
+            "share_resolved": 0.3333333333333333,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          },
+          "Qwen3.8-Flash vs Jev-1.13.0": {
+            "share_resolved": 0.3333333333333333,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          },
+          "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": {
+            "share_resolved": 0.0,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          }
+        }
+      }
+    }
+  },
+  "primary_d9": {
+    "eligibility_rule": "D-9 positive floor resolved under both D-10 block analyses",
+    "H1": {
+      "tested": true,
+      "base_point": "dp_r0p3_s30_u5",
+      "base_point_available": true,
+      "base_point_eligible": true,
+      "result": {
+        "block_s": 48.81676346203054,
+        "n_blocks": 7,
+        "block_10s_s": 10.0,
+        "n_blocks_10s": 33,
+        "primary_B": {
+          "tests": [
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.014545643174304661,
+              "ci_high": 0.015477065271486349,
+              "p_raw": 0.9878,
+              "n": 74,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.021442048517520212,
+              "ci_high": 0.004573521716378863,
+              "p_raw": 0.3586,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.051327542800601124,
+              "ci_high": -0.006275531258789523,
+              "p_raw": 0.0012,
+              "n": 74,
+              "p_holm": 0.0072,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.049373720516243884,
+              "ci_high": -0.010298627925746566,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.02212968081330404,
+              "ci_high": 0.002319061275970905,
+              "p_raw": 0.1162,
+              "n": 74,
+              "p_holm": 0.581,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.024441102756892232,
+              "ci_high": 0.004974120082815741,
+              "p_raw": 0.5556,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.003135345089265253,
+              "ci_high": 0.039711075001549634,
+              "p_raw": 0.1558,
+              "n": 74,
+              "p_holm": 0.6232,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.004598765432098766,
+              "ci_high": 0.019708994708994704,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": false,
+            "GLM-5.3-Flash vs Jev-1.13.0": false,
+            "Qwen3.8-Flash vs Jev-1.13.0": false,
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": false
+          }
+        },
+        "sensitivity_10s": {
+          "tests": [
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.01561975835504867,
+              "ci_high": 0.0162751483704521,
+              "p_raw": 0.9598,
+              "n": 74,
+              "p_holm": 0.9598,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.014689507333960336,
+              "ci_high": 0.0005295975157888433,
+              "p_raw": 0.0724,
+              "n": 100,
+              "p_holm": 0.36200000000000004,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.044237894969760216,
+              "ci_high": -0.00562566719689933,
+              "p_raw": 0.0114,
+              "n": 74,
+              "p_holm": 0.0684,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.038534182854522224,
+              "ci_high": -0.01688412600672453,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.03078612185061207,
+              "ci_high": 0.014718270534452634,
+              "p_raw": 0.4156,
+              "n": 74,
+              "p_holm": 0.8312,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.016900484436198716,
+              "ci_high": 0.0020552657153086835,
+              "p_raw": 0.149,
+              "n": 100,
+              "p_holm": 0.44699999999999995,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.0027599132467964484,
+              "ci_high": 0.03201240667798926,
+              "p_raw": 0.0948,
+              "n": 74,
+              "p_holm": 0.3792,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.006083688180123013,
+              "ci_high": 0.017276806660434258,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": false,
+            "GLM-5.3-Flash vs Jev-1.13.0": false,
+            "Qwen3.8-Flash vs Jev-1.13.0": false,
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": false
+          }
+        },
+        "tests": [
+          {
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.014545643174304661,
+              "ci_high": 0.015477065271486349,
+              "p_raw": 0.9878,
+              "n": 74,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": 0.0002865579637195985,
+              "ci_low": -0.01561975835504867,
+              "ci_high": 0.0162751483704521,
+              "p_raw": 0.9598,
+              "n": 74,
+              "p_holm": 0.9598,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.021442048517520212,
+              "ci_high": 0.004573521716378863,
+              "p_raw": 0.3586,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.006604761904761902,
+              "ci_low": -0.014689507333960336,
+              "ci_high": 0.0005295975157888433,
+              "p_raw": 0.0724,
+              "n": 100,
+              "p_holm": 0.36200000000000004,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.051327542800601124,
+              "ci_high": -0.006275531258789523,
+              "p_raw": 0.0012,
+              "n": 74,
+              "p_holm": 0.0072,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.024478449331252,
+              "ci_low": -0.044237894969760216,
+              "ci_high": -0.00562566719689933,
+              "p_raw": 0.0114,
+              "n": 74,
+              "p_holm": 0.0684,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.049373720516243884,
+              "ci_high": -0.010298627925746566,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.0266047619047619,
+              "ci_low": -0.038534182854522224,
+              "ci_high": -0.01688412600672453,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": true
+            },
+            "resolved_pos": false,
+            "resolved_neg": true
+          },
+          {
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.02212968081330404,
+              "ci_high": 0.002319061275970905,
+              "p_raw": 0.1162,
+              "n": 74,
+              "p_holm": 0.581,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "aff",
+              "point": -0.009788021803011523,
+              "ci_low": -0.03078612185061207,
+              "ci_high": 0.014718270534452634,
+              "p_raw": 0.4156,
+              "n": 74,
+              "p_holm": 0.8312,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.024441102756892232,
+              "ci_high": 0.004974120082815741,
+              "p_raw": 0.5556,
+              "n": 100,
+              "p_holm": 1.0,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "metric": "net",
+              "point": -0.00664285714285714,
+              "ci_low": -0.016900484436198716,
+              "ci_high": 0.0020552657153086835,
+              "p_raw": 0.149,
+              "n": 100,
+              "p_holm": 0.44699999999999995,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "metric": "aff",
+            "primary_B": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.003135345089265253,
+              "ci_high": 0.039711075001549634,
+              "p_raw": 0.1558,
+              "n": 74,
+              "p_holm": 0.6232,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "aff",
+              "point": 0.01460291199252945,
+              "ci_low": -0.0027599132467964484,
+              "ci_high": 0.03201240667798926,
+              "p_raw": 0.0948,
+              "n": 74,
+              "p_holm": 0.3792,
+              "family_size": 8,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false
+          },
+          {
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "metric": "net",
+            "primary_B": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.004598765432098766,
+              "ci_high": 0.019708994708994704,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "metric": "net",
+              "point": 0.011152380952380954,
+              "ci_low": 0.006083688180123013,
+              "ci_high": 0.017276806660434258,
+              "p_raw": 9.999000099990002e-05,
+              "n": 100,
+              "p_holm": 0.0007999200079992001,
+              "family_size": 8,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "resolved_pos": true,
+            "resolved_neg": false
+          }
+        ],
+        "holds": {
+          "DeepSeek-V4.1-Flash vs Jev-1.13.0": false,
+          "GLM-5.3-Flash vs Jev-1.13.0": false,
+          "Qwen3.8-Flash vs Jev-1.13.0": false,
+          "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": false
+        }
+      }
+    },
+    "H2": {
+      "complete": true,
+      "n_prespecified_points": 9,
+      "n_complete_points": 9,
+      "complete_points": [
+        "dp_r0p1_s120_u5",
+        "dp_r0p1_s3_u5",
+        "dp_r0p1_s60_u5",
+        "dp_r0p3_s120_u5",
+        "dp_r0p3_s3_u5",
+        "dp_r0p3_s60_u5",
+        "dp_r1_s120_u5",
+        "dp_r1_s3_u5",
+        "dp_r1_s60_u5"
+      ],
+      "result": {
+        "n_eligible": 3,
+        "block_assignments_by_point": {
+          "dp_r0p1_s120_u5": {
+            "block_s": 106.60670594619674,
+            "n_blocks": 9,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p1_s3_u5": {
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p1_s60_u5": {
+            "block_s": 84.65692294408052,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p3_s120_u5": {
+            "block_s": 10.0,
+            "n_blocks": 34,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r0p3_s3_u5": {
+            "block_s": 10.0,
+            "n_blocks": 34,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r0p3_s60_u5": {
+            "block_s": 25.56837853274422,
+            "n_blocks": 13,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r1_s120_u5": {
+            "block_s": 11.71712177678048,
+            "n_blocks": 9,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          "dp_r1_s3_u5": {
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          "dp_r1_s60_u5": {
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          }
+        },
+        "primary_B": {
+          "n_eligible": 3,
+          "tests": [
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": 0.007825414864921488,
+              "ci_high": 0.045121743940053444,
+              "p_raw": 9.999000099990002e-05,
+              "n": 71,
+              "p_holm": 0.0011998800119988001,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.02110486589144767,
+              "ci_high": 0.06317505709415605,
+              "p_raw": 0.0014,
+              "n": 71,
+              "p_holm": 0.014,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": 0.0016664430782397466,
+              "ci_high": 0.047351052520982435,
+              "p_raw": 0.0344,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.05199155741918901,
+              "ci_high": 0.01333061235172275,
+              "p_raw": 0.2892,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.0003672327176791436,
+              "ci_high": 0.010748033662765803,
+              "p_raw": 0.0366,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004464473882282105,
+              "ci_high": 0.013123806373049069,
+              "p_raw": 0.3854,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004335627382551921,
+              "ci_high": 0.01758557322794164,
+              "p_raw": 0.0006,
+              "n": 71,
+              "p_holm": 0.006599999999999999,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025780490342990348,
+              "ci_high": 0.00835075483124301,
+              "p_raw": 0.3156,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.003503470572782108,
+              "ci_high": 0.02000316452789722,
+              "p_raw": 0.2566,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.024684315795615887,
+              "ci_high": 0.005887881271693099,
+              "p_raw": 0.2054,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.009924874503115669,
+              "ci_high": 0.01941224498921896,
+              "p_raw": 0.4852,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.00473958412143869,
+              "ci_high": 0.01105484210653571,
+              "p_raw": 0.5154,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "GLM-5.3-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.8-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": {
+              "share_resolved": 0.0,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            }
+          }
+        },
+        "sensitivity_10s": {
+          "n_eligible": 3,
+          "tests": [
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": -0.000122719414047321,
+              "ci_high": 0.05109220126916111,
+              "p_raw": 0.0518,
+              "n": 71,
+              "p_holm": 0.4662,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.01931661570251932,
+              "ci_high": 0.07904917321950303,
+              "p_raw": 0.0004,
+              "n": 71,
+              "p_holm": 0.0048000000000000004,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": -0.002959749416043413,
+              "ci_high": 0.05805787212040253,
+              "p_raw": 0.0822,
+              "n": 71,
+              "p_holm": 0.6576,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.04913813006023827,
+              "ci_high": 0.013770915941484491,
+              "p_raw": 0.2808,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.00029699927999560043,
+              "ci_high": 0.010741534344561689,
+              "p_raw": 0.0376,
+              "n": 71,
+              "p_holm": 0.376,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004497670928041402,
+              "ci_high": 0.012921082354229346,
+              "p_raw": 0.3856,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004165007654444267,
+              "ci_high": 0.01770425174443031,
+              "p_raw": 0.001,
+              "n": 71,
+              "p_holm": 0.011,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025680938625650142,
+              "ci_high": 0.008472149472149462,
+              "p_raw": 0.321,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.009253110920873752,
+              "ci_high": 0.023328873242227908,
+              "p_raw": 0.4176,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.025288726803167218,
+              "ci_high": 0.009457795507936382,
+              "p_raw": 0.3088,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.010146306403892864,
+              "ci_high": 0.021655825569314117,
+              "p_raw": 0.505,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.003857439980211333,
+              "ci_high": 0.009814344797247626,
+              "p_raw": 0.4548,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            }
+          ],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.0,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "GLM-5.3-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.8-Flash vs Jev-1.13.0": {
+              "share_resolved": 0.3333333333333333,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            },
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": {
+              "share_resolved": 0.0,
+              "n_reversed_resolved": 0,
+              "n_points": 3,
+              "holds": false
+            }
+          }
+        },
+        "tests": [
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": 0.007825414864921488,
+              "ci_high": 0.045121743940053444,
+              "p_raw": 9.999000099990002e-05,
+              "n": 71,
+              "p_holm": 0.0011998800119988001,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.022338048846604293,
+              "ci_low": -0.000122719414047321,
+              "ci_high": 0.05109220126916111,
+              "p_raw": 0.0518,
+              "n": 71,
+              "p_holm": 0.4662,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.02110486589144767,
+              "ci_high": 0.06317505709415605,
+              "p_raw": 0.0014,
+              "n": 71,
+              "p_holm": 0.014,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0473186348094628,
+              "ci_low": 0.01931661570251932,
+              "ci_high": 0.07904917321950303,
+              "p_raw": 0.0004,
+              "n": 71,
+              "p_holm": 0.0048000000000000004,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "resolved_pos": true,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": 0.0016664430782397466,
+              "ci_high": 0.047351052520982435,
+              "p_raw": 0.0344,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.025049628649018125,
+              "ci_low": -0.002959749416043413,
+              "ci_high": 0.05805787212040253,
+              "p_raw": 0.0822,
+              "n": 71,
+              "p_holm": 0.6576,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r0p1_s3_u5",
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "primary_B": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.05199155741918901,
+              "ci_high": 0.01333061235172275,
+              "p_raw": 0.2892,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r0p1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": -0.017192105625204217,
+              "ci_low": -0.04913813006023827,
+              "ci_high": 0.013770915941484491,
+              "p_raw": 0.2808,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.0003672327176791436,
+              "ci_high": 0.010748033662765803,
+              "p_raw": 0.0366,
+              "n": 71,
+              "p_holm": 0.3096,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005672889317255512,
+              "ci_low": 0.00029699927999560043,
+              "ci_high": 0.010741534344561689,
+              "p_raw": 0.0376,
+              "n": 71,
+              "p_holm": 0.376,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004464473882282105,
+              "ci_high": 0.013123806373049069,
+              "p_raw": 0.3854,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.0037105265626392347,
+              "ci_low": -0.004497670928041402,
+              "ci_high": 0.012921082354229346,
+              "p_raw": 0.3856,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004335627382551921,
+              "ci_high": 0.01758557322794164,
+              "p_raw": 0.0006,
+              "n": 71,
+              "p_holm": 0.006599999999999999,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.010580182728070047,
+              "ci_low": 0.004165007654444267,
+              "ci_high": 0.01770425174443031,
+              "p_raw": 0.001,
+              "n": 71,
+              "p_holm": 0.011,
+              "family_size": 12,
+              "resolved_pos": true,
+              "resolved_neg": false
+            },
+            "resolved_pos": true,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s3_u5",
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025780490342990348,
+              "ci_high": 0.00835075483124301,
+              "p_raw": 0.3156,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s3_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.002821433261574107,
+              "ci_low": -0.0025680938625650142,
+              "ci_high": 0.008472149472149462,
+              "p_raw": 0.321,
+              "n": 71,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "DeepSeek-V4.1-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.003503470572782108,
+              "ci_high": 0.02000316452789722,
+              "p_raw": 0.2566,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "DeepSeek-V4.1-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.005790871300489949,
+              "ci_low": -0.009253110920873752,
+              "ci_high": 0.023328873242227908,
+              "p_raw": 0.4176,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "GLM-5.3-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.024684315795615887,
+              "ci_high": 0.005887881271693099,
+              "p_raw": 0.2054,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "GLM-5.3-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": -0.009563268052402351,
+              "ci_low": -0.025288726803167218,
+              "ci_high": 0.009457795507936382,
+              "p_raw": 0.3088,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "Qwen3.8-Flash",
+              "Jev-1.13.0"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.009924874503115669,
+              "ci_high": 0.01941224498921896,
+              "p_raw": 0.4852,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.8-Flash",
+                "Jev-1.13.0"
+              ],
+              "point": 0.00488343754556485,
+              "ci_low": -0.010146306403892864,
+              "ci_high": 0.021655825569314117,
+              "p_raw": 0.505,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          {
+            "design_point": "dp_r1_s60_u5",
+            "pair": [
+              "Qwen3.5-4B-JSON",
+              "SemIf-Qwen3.5-4B"
+            ],
+            "primary_B": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.00473958412143869,
+              "ci_high": 0.01105484210653571,
+              "p_raw": 0.5154,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "sensitivity_10s": {
+              "design_point": "dp_r1_s60_u5",
+              "pair": [
+                "Qwen3.5-4B-JSON",
+                "SemIf-Qwen3.5-4B"
+              ],
+              "point": 0.0027966726803574896,
+              "ci_low": -0.003857439980211333,
+              "ci_high": 0.009814344797247626,
+              "p_raw": 0.4548,
+              "n": 75,
+              "p_holm": 1.0,
+              "family_size": 12,
+              "resolved_pos": false,
+              "resolved_neg": false
+            },
+            "resolved_pos": false,
+            "resolved_neg": false,
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          }
+        ],
+        "holds": {
+          "DeepSeek-V4.1-Flash vs Jev-1.13.0": {
+            "share_resolved": 0.0,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          },
+          "GLM-5.3-Flash vs Jev-1.13.0": {
+            "share_resolved": 0.3333333333333333,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          },
+          "Qwen3.8-Flash vs Jev-1.13.0": {
+            "share_resolved": 0.3333333333333333,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          },
+          "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": {
+            "share_resolved": 0.0,
+            "n_reversed_resolved": 0,
+            "n_points": 3,
+            "holds": false
+          }
+        }
+      }
+    }
+  },
+  "sensitivity_original_5pp": {
+    "eligibility_rule": "original C-1 >= 5 percentage points rule, resolved under both D-10 block analyses",
+    "H1": {
+      "tested": false,
+      "base_point": "dp_r0p3_s30_u5",
+      "base_point_available": true,
+      "base_point_eligible": false,
+      "result": null
+    },
+    "H2": {
+      "complete": true,
+      "n_prespecified_points": 9,
+      "n_complete_points": 9,
+      "complete_points": [
+        "dp_r0p1_s120_u5",
+        "dp_r0p1_s3_u5",
+        "dp_r0p1_s60_u5",
+        "dp_r0p3_s120_u5",
+        "dp_r0p3_s3_u5",
+        "dp_r0p3_s60_u5",
+        "dp_r1_s120_u5",
+        "dp_r1_s3_u5",
+        "dp_r1_s60_u5"
+      ],
+      "result": {
+        "n_eligible": 0,
+        "block_assignments_by_point": {
+          "dp_r0p1_s120_u5": {
+            "block_s": 106.60670594619674,
+            "n_blocks": 9,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p1_s3_u5": {
+            "block_s": 134.72580815496843,
+            "n_blocks": 7,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p1_s60_u5": {
+            "block_s": 84.65692294408052,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 100
+          },
+          "dp_r0p3_s120_u5": {
+            "block_s": 10.0,
+            "n_blocks": 34,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r0p3_s3_u5": {
+            "block_s": 10.0,
+            "n_blocks": 34,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r0p3_s60_u5": {
+            "block_s": 25.56837853274422,
+            "n_blocks": 13,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 33
+          },
+          "dp_r1_s120_u5": {
+            "block_s": 11.71712177678048,
+            "n_blocks": 9,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          "dp_r1_s3_u5": {
+            "block_s": 10.0,
+            "n_blocks": 11,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          },
+          "dp_r1_s60_u5": {
+            "block_s": 13.18686218590583,
+            "n_blocks": 8,
+            "block_10s_s": 10.0,
+            "n_blocks_10s": 10
+          }
+        },
+        "primary_B": {
+          "n_eligible": 0,
+          "tests": [],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": null,
+            "GLM-5.3-Flash vs Jev-1.13.0": null,
+            "Qwen3.8-Flash vs Jev-1.13.0": null,
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": null
+          }
+        },
+        "sensitivity_10s": {
+          "n_eligible": 0,
+          "tests": [],
+          "holds": {
+            "DeepSeek-V4.1-Flash vs Jev-1.13.0": null,
+            "GLM-5.3-Flash vs Jev-1.13.0": null,
+            "Qwen3.8-Flash vs Jev-1.13.0": null,
+            "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": null
+          }
+        },
+        "tests": [],
+        "holds": {
+          "DeepSeek-V4.1-Flash vs Jev-1.13.0": null,
+          "GLM-5.3-Flash vs Jev-1.13.0": null,
+          "Qwen3.8-Flash vs Jev-1.13.0": null,
+          "Qwen3.5-4B-JSON vs SemIf-Qwen3.5-4B": null
+        }
+      }
+    }
+  }
+}

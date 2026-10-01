@@ -1,0 +1,7 @@
+test_type,condition,model_1,model_2,statistic_name,statistic_value,df,p_value,n_cases,status,details
+Cochran_Q,c57_fresh,"All six (Jev-1.13.0, DeepSeek-V4.1-Flash, GLM-5.3-Flash, Qwen3.8-Flash, SemIf-Qwen3.5-4B, AnyJev-L0)",N/A,Q,458.0888030888031,5,8.838217288953434e-97,150,tested,k=6 interpreters
+McNemar,c57_fresh,DeepSeek-V4.1-Flash,Jev-1.13.0,b/c,11/3,1,0.057373046875,150,tested,"DeepSeek-V4.1-Flash correct only: 11, Jev correct only: 3"
+McNemar,c57_fresh,GLM-5.3-Flash,Jev-1.13.0,b/c,14/5,1,0.063568115234375,150,tested,"GLM-5.3-Flash correct only: 14, Jev correct only: 5"
+McNemar,c57_fresh,Qwen3.8-Flash,Jev-1.13.0,b/c,9/13,1,0.5234670639038086,150,tested,"Qwen3.8-Flash correct only: 9, Jev correct only: 13"
+McNemar,c57_fresh,SemIf-Qwen3.5-4B,Jev-1.13.0,b/c,1/116,1,1.4203733339855864e-33,150,tested,"SemIf-Qwen3.5-4B correct only: 1, Jev correct only: 116"
+McNemar,c57_fresh,AnyJev-L0,Jev-1.13.0,b/c,4/98,1,1.74595783696353e-24,150,tested,"AnyJev-L0 correct only: 4, Jev correct only: 98"

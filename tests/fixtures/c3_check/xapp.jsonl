@@ -1,0 +1,3 @@
+not-json startup noise
+{"control":{"max_prb_ratio":30},"event":"control_sent","intent_id":"intent-1","policy_id":"c3-fixture-run-00-a","run_id":"fixture-run","t_control_sent":"2026-09-26T00:00:01.014000Z","t_seen":"2026-09-26T00:00:01.013000Z"}
+{"control":{"max_prb_ratio":100},"event":"control_sent","intent_id":"intent-2","policy_id":"c3-fixture-run-01-b","run_id":"fixture-run","t_control_sent":"2026-09-26T00:00:02.015000Z","t_seen":"2026-09-26T00:00:02.014000Z"}

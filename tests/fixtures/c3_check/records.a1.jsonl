@@ -1,0 +1,2 @@
+{"elapsed_s":0.004,"event":"a1_put_ack","policy_id":"c3-fixture-run-00-a","status":201,"t_request":"2026-09-26T00:00:01.000000Z","t_utc":"2026-09-26T00:00:01.004000Z"}
+{"elapsed_s":0.003,"event":"a1_put_ack","policy_id":"c3-fixture-run-01-b","status":201,"t_request":"2026-09-26T00:00:02.000000Z","t_utc":"2026-09-26T00:00:02.003000Z"}

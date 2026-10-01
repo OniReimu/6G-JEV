@@ -1,0 +1,215 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RANIntent v1 truth record",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": [
+        "prioritise",
+        "deprioritise",
+        "guarantee_share",
+        "cap_share",
+        "restrict_edge",
+        "relax_edge",
+        "set_latency_target",
+        "revert_default",
+        "unsupported"
+      ]
+    },
+    "class": {
+      "type": "string",
+      "enum": [
+        "emergency_video",
+        "mission_voice",
+        "factory_control",
+        "xr_gaming",
+        "video_streaming",
+        "iot_metering",
+        "analytics_offload",
+        "best_effort"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "enum": [
+        "all_cells",
+        "north_cluster",
+        "south_cluster",
+        "stadium",
+        "hospital_zone",
+        "most_loaded_cells",
+        "worst_edge_cells",
+        "unspecified"
+      ]
+    },
+    "target_cluster": {
+      "type": "string",
+      "enum": [
+        "north_cluster",
+        "south_cluster",
+        "stadium",
+        "hospital_zone",
+        "none"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "critical",
+        "high",
+        "normal",
+        "low",
+        "unspecified"
+      ]
+    },
+    "prb_share": {
+      "type": "string",
+      "enum": [
+        "10",
+        "20",
+        "30",
+        "50",
+        "70",
+        "unspecified"
+      ]
+    },
+    "edge_site": {
+      "type": "string",
+      "enum": [
+        "on_site",
+        "metro_edge",
+        "regional_cloud",
+        "any",
+        "unspecified"
+      ]
+    },
+    "latency_target": {
+      "type": "string",
+      "enum": [
+        "5",
+        "10",
+        "20",
+        "50",
+        "100",
+        "unspecified"
+      ]
+    },
+    "duration": {
+      "type": "string",
+      "enum": [
+        "until_revoked",
+        "15min",
+        "1h",
+        "event_end",
+        "unspecified"
+      ]
+    },
+    "issuer": {
+      "type": "string",
+      "enum": [
+        "operator",
+        "axis_robotics",
+        "civic_safety",
+        "datacrest",
+        "lumen_media"
+      ]
+    }
+  },
+  "required": [
+    "action",
+    "class",
+    "scope",
+    "target_cluster",
+    "priority",
+    "prb_share",
+    "edge_site",
+    "latency_target",
+    "duration",
+    "issuer"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "revert_default"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "priority": {
+            "const": "unspecified"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "unsupported"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "scope": {
+            "const": "unspecified"
+          },
+          "priority": {
+            "const": "unspecified"
+          },
+          "prb_share": {
+            "const": "unspecified"
+          },
+          "edge_site": {
+            "const": "unspecified"
+          },
+          "latency_target": {
+            "const": "unspecified"
+          },
+          "duration": {
+            "const": "unspecified"
+          },
+          "target_cluster": {
+            "const": "none"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "scope": {
+            "enum": [
+              "most_loaded_cells",
+              "worst_edge_cells"
+            ]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "target_cluster": {
+            "enum": [
+              "north_cluster",
+              "south_cluster",
+              "stadium",
+              "hospital_zone"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "target_cluster": {
+            "const": "none"
+          }
+        }
+      }
+    }
+  ]
+}

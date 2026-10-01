@@ -1,0 +1,9 @@
+rule,challenger,anchor,n_eligible,n_points,share_resolved,n_reversed_resolved,holds,source_key
+primary_d10,DeepSeek-V4.1-Flash,Jev-1.13.0,3,3.0,0.0,0.0,not testable,primary_d10.H2.result.n_eligible
+primary_d10,GLM-5.3-Flash,Jev-1.13.0,3,3.0,0.3333333333333333,0.0,not testable,primary_d10.H2.result.n_eligible
+primary_d10,Qwen3.8-Flash,Jev-1.13.0,3,3.0,0.3333333333333333,0.0,not testable,primary_d10.H2.result.n_eligible
+primary_d10,Qwen3.5-4B-JSON,SemIf-Qwen3.5-4B,3,3.0,0.0,0.0,not testable,primary_d10.H2.result.n_eligible
+sensitivity_original_5pp,DeepSeek-V4.1-Flash,Jev-1.13.0,0,,,,not testable,sensitivity_original_5pp.H2.result.n_eligible
+sensitivity_original_5pp,GLM-5.3-Flash,Jev-1.13.0,0,,,,not testable,sensitivity_original_5pp.H2.result.n_eligible
+sensitivity_original_5pp,Qwen3.8-Flash,Jev-1.13.0,0,,,,not testable,sensitivity_original_5pp.H2.result.n_eligible
+sensitivity_original_5pp,Qwen3.5-4B-JSON,SemIf-Qwen3.5-4B,0,,,,not testable,sensitivity_original_5pp.H2.result.n_eligible

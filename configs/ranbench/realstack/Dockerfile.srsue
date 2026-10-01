@@ -1,0 +1,2 @@
+FROM flyingpiglet/debian-srsran-4g:latest
+RUN apt-get update && apt-get install -y iperf3 iputils-ping iproute2 && rm -rf /var/lib/apt/lists/*

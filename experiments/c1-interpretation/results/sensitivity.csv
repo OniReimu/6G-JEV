@@ -1,0 +1,9 @@
+model,condition,primary_source,sensitivity_source,metric_id,metric_name,primary_value,sensitivity_value,delta
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,total_cases,Total Cases (n),300,300,+0.0000
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,valid_cases,Valid Cases,276,300,+24.0000
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,transport_errors,Transport Errors,24,0,-24.0000
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,availability_rate,Availability Rate,0.9200,1.0000,+0.0800
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,actuated_vector_match,Actuated Vector Match,0.9133,0.9867,+0.0733
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,full_policy_match,Full Policy Match (EM),0.8133,0.8767,+0.0633
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,latency_p50,Latency p50 (s),1.6438,1.3549,-0.2889
+GLM-5.3-Flash,c57_contradictory,c1_hosted,c1_rerun/c57_contradictory__GLM-5.3-Flash__rerun1,latency_p95,Latency p95 (s),2.9510,2.8664,-0.0846

@@ -1,0 +1,16 @@
+# edgebench-cuda.txt + the Qwen3.5 GatedDeltaNet fast path. The paper's SemIf-Qwen3.5-4B runs used this environment.
+# transformers 5.17 (models/qwen3_5/modeling_qwen3_5.py, integrations/hub_kernels.py) imports, at module load:
+#   fla.ops.gated_delta_rule.{chunk,fused_recurrent}_gated_delta_rule   (distribution flash-linear-attention)
+#   causal_conv1d.{causal_conv1d_fn,causal_conv1d_update}                (distribution causal-conv1d)
+# and falls back to the reference PyTorch path for any import that fails, warning once per function.
+# fla is pure Python + Triton (triton 3.7.1 comes with torch 2.13.0+cu132).
+# causal-conv1d 1.7.0 ships only an sdist (a CUDA extension) and is NOT listed here: build it separately with
+# nvcc from CUDA 13.0, --no-build-isolation against the torch above; its setup.py needs ninja and wheel (below).
+# Install:
+#   uv pip install --python <venv>/bin/python --index-strategy unsafe-best-match -r requirements/edgebench-cuda-fla.txt
+-r edgebench-cuda.txt
+flash-linear-attention==0.5.2
+fla-core==0.5.2
+einops==0.8.2
+ninja==1.13.2
+wheel==0.48.0

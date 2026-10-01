@@ -1,0 +1,73 @@
+{
+  "run_id": "RQ3_Qwen3.8-Flash_rate_0p1_20260925",
+  "rq": "RQ3",
+  "model": "Qwen3.8-Flash",
+  "deployment": "hosted",
+  "rate_per_s": 0.1,
+  "slots": 4,
+  "seed": 20260925,
+  "expected_intents": 300,
+  "completed_intents": 300,
+  "aborted_after_arrival": 0,
+  "valid_intents": 291,
+  "complete": true,
+  "stop_reason": null,
+  "degradation_reason": null,
+  "transport_error_rows": 9,
+  "transport_error_rate": 0.03,
+  "transport_error_threshold": 0.05,
+  "rerun_block_required": false,
+  "rho": 0.05851371500967071,
+  "non_stationary": false,
+  "mean_service_latency_s": 2.3405486003868283,
+  "elapsed_wall_s": 2799.7657924992964,
+  "total_spend_usd": 0.024194559999999997,
+  "spend_cap_usd": 20.0,
+  "cost_unknown_rows": 9,
+  "error_counts_by_type": {
+    "HTTP_429": 9
+  },
+  "per_slot_completed": [
+    75,
+    75,
+    75,
+    75
+  ],
+  "client_location": "Mac M4 Max, Sydney AU",
+  "started_at_utc": "2026-09-26T17:00:33.240618+00:00",
+  "finished_at_utc": "2026-09-26T17:47:13.051998+00:00",
+  "git_sha": "7a7d5d72caa84f46033065366c9a56ffaf71968a",
+  "git_source": "git",
+  "allow_dirty": false,
+  "provenance_tree_sha256": null,
+  "pool_path": "data/ranbench/ranintent-v1/pool/c2c3_pool.jsonl",
+  "pool_size": 150,
+  "pool_sha256": "40943be0b6fefa0755aa0b7568962b6b48ddb85498b7c3caff657a4768f6b0ae",
+  "corpus_manifest_sha256": "b273abf57912ecfa2478f0062f7548698c9dc46747d00e4a07247be049094666",
+  "schedule_sha256": "d511dc4978da0d334437bdc45fff6b310f1073d27d00264e6cad9fa7898b32af",
+  "arrival_last_s": 2797.7583597210914,
+  "pool_passes": 2,
+  "warmup_per_slot": 0,
+  "warmup_outcomes": [],
+  "trace_file": "trace.jsonl",
+  "ledger_file": "ledger.jsonl",
+  "order_file": null,
+  "interpreter": {
+    "adapter": "chat_json",
+    "deployment": "hosted",
+    "platform": "hosted",
+    "serving_stack": "OpenRouter chat completions, provider alibaba, response_format json_schema strict",
+    "model": "qwen/qwen3.8-flash",
+    "accepted_resolved_models": [
+      "qwen/qwen3.8-flash"
+    ],
+    "provider": "alibaba",
+    "base_url": "https://openrouter.ai",
+    "path": "/api/v1/chat/completions",
+    "reasoning": {
+      "enabled": false
+    },
+    "timeout_s": 30.0,
+    "effective_base_url": "https://openrouter.ai"
+  }
+}

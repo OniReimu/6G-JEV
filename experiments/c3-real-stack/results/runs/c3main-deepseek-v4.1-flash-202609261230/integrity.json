@@ -1,0 +1,52 @@
+{
+  "a1_acknowledgements": 30,
+  "actual_decisions": 30,
+  "actuated_decisions": 30,
+  "errors": [],
+  "expected_decisions": 30,
+  "interpreter": "DeepSeek-V4.1-Flash",
+  "invalid_decisions": 0,
+  "iperf3_intervals": 130,
+  "run_id": "c3main-deepseek-v4.1-flash-202609261230",
+  "sources": {
+    "a1": "experiments/c3-real-stack/results/runs/c3main-deepseek-v4.1-flash-202609261230/records.a1.jsonl",
+    "gnb": "experiments/c3-real-stack/results/runs/c3main-deepseek-v4.1-flash-202609261230/gnb.log",
+    "iperf3": "experiments/c3-real-stack/results/runs/c3main-deepseek-v4.1-flash-202609261230/iperf3.json",
+    "records": "experiments/c3-real-stack/results/runs/c3main-deepseek-v4.1-flash-202609261230/records.jsonl",
+    "xapp": "experiments/c3-real-stack/results/runs/c3main-deepseek-v4.1-flash-202609261230/xapp.jsonl"
+  },
+  "status": "PASS",
+  "strict_gnb_exchanges": 30,
+  "summary": {
+    "delta_a1_s": {
+      "max_s": 0.021866798400878906,
+      "median_s": 0.016282200813293457,
+      "min_s": 0.013290166854858398,
+      "n": 30,
+      "null_count": 0
+    },
+    "delta_e2_s": {
+      "max_s": 0.0065882205963134766,
+      "median_s": 0.002899646759033203,
+      "min_s": 0.0011010169982910156,
+      "n": 30,
+      "null_count": 0
+    },
+    "ell_s": {
+      "max_s": 1.1250289166346192,
+      "median_s": 0.5265401666983962,
+      "min_s": 0.44875083304941654,
+      "n": 30,
+      "null_count": 0
+    },
+    "kpm_change_upper_bound_s": {
+      "max_s": 3.9470109939575195,
+      "median_s": 1.3505305051803589,
+      "min_s": 0.0012428760528564453,
+      "n": 30,
+      "null_count": 0
+    }
+  },
+  "unactuatable_decisions": 0,
+  "xapp_controls": 30
+}

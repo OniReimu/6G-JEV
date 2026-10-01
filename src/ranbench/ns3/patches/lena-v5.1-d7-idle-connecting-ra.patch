@@ -1,0 +1,21 @@
+diff --git a/model/nr-ue-rrc.cc b/model/nr-ue-rrc.cc
+index 58e4047e..2aea2064 100644
+--- a/model/nr-ue-rrc.cc
++++ b/model/nr-ue-rrc.cc
+@@ -953,6 +953,16 @@ NrUeRrc::DoNotifyRandomAccessSuccessful()
+     }
+     break;
+ 
++    case IDLE_CONNECTING: {
++        // EXP-2026-003 patch (D-7): the MAC completed another random access while the RRC Connection
++        // Request (msg3) is still awaiting its Setup. v5.1 aborted the simulation here. The UE keeps waiting;
++        // T300, already running, bounds the wait and ends in ConnectionTimeout if no Setup arrives
++        // (3GPP TS 38.331, clause 5.3.3). One stderr line per occurrence, so every run can report its count.
++        std::cerr << "EXP2026003_PATCH_D7 imsi=" << m_imsi << " t=" << Simulator::Now().GetSeconds()
++                  << " cell=" << m_cellId << std::endl;
++    }
++    break;
++
+     default:
+         NS_FATAL_ERROR("unexpected event in state " << ToString(m_state));
+         break;

@@ -1,0 +1,52 @@
+{
+  "a1_acknowledgements": 28,
+  "actual_decisions": 30,
+  "actuated_decisions": 28,
+  "errors": [],
+  "expected_decisions": 30,
+  "interpreter": "AnyJev-L0",
+  "invalid_decisions": 0,
+  "iperf3_intervals": 196,
+  "run_id": "c3main-anyjev-202609261402",
+  "sources": {
+    "a1": "experiments/c3-real-stack/results/runs/c3main-anyjev-202609261402/records.a1.jsonl",
+    "gnb": "experiments/c3-real-stack/results/runs/c3main-anyjev-202609261402/gnb.log",
+    "iperf3": "experiments/c3-real-stack/results/runs/c3main-anyjev-202609261402/iperf3.json",
+    "records": "experiments/c3-real-stack/results/runs/c3main-anyjev-202609261402/records.jsonl",
+    "xapp": "experiments/c3-real-stack/results/runs/c3main-anyjev-202609261402/xapp.jsonl"
+  },
+  "status": "PASS",
+  "strict_gnb_exchanges": 28,
+  "summary": {
+    "delta_a1_s": {
+      "max_s": 0.02376389503479004,
+      "median_s": 0.019110918045043945,
+      "min_s": 0.013903617858886719,
+      "n": 28,
+      "null_count": 2
+    },
+    "delta_e2_s": {
+      "max_s": 0.005676984786987305,
+      "median_s": 0.0030585527420043945,
+      "min_s": 0.0010058879852294922,
+      "n": 28,
+      "null_count": 2
+    },
+    "ell_s": {
+      "max_s": 1.8045706246048212,
+      "median_s": 1.0680559584870934,
+      "min_s": 0.7995751248672605,
+      "n": 30,
+      "null_count": 0
+    },
+    "kpm_change_upper_bound_s": {
+      "max_s": 6.242847919464111,
+      "median_s": 1.2466659545898438,
+      "min_s": 0.00150299072265625,
+      "n": 27,
+      "null_count": 3
+    }
+  },
+  "unactuatable_decisions": 2,
+  "xapp_controls": 28
+}

@@ -1,0 +1,13 @@
+The RANIntent v1 benchmark (data/ranbench/ranintent-v1/), the experiment results (experiments/), and the number
+ledger (experiments/paper_numbers.md) are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0).
+
+Copyright (c) 2026 Delong Li, Xu Wang, Haochen Gong, Rui Lang, and Guangsheng Yu
+
+You may share and adapt this material for any purpose, provided that you give appropriate credit,
+link to the license, and indicate whether changes were made.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Third-party material is not covered: ns-3, 5G-LENA, the real-stack container images, and model weights keep the
+licenses of their publishers.

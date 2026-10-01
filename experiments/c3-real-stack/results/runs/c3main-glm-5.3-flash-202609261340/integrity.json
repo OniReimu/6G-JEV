@@ -1,0 +1,52 @@
+{
+  "a1_acknowledgements": 30,
+  "actual_decisions": 30,
+  "actuated_decisions": 30,
+  "errors": [],
+  "expected_decisions": 30,
+  "interpreter": "GLM-5.3-Flash",
+  "invalid_decisions": 0,
+  "iperf3_intervals": 208,
+  "run_id": "c3main-glm-5.3-flash-202609261340",
+  "sources": {
+    "a1": "experiments/c3-real-stack/results/runs/c3main-glm-5.3-flash-202609261340/records.a1.jsonl",
+    "gnb": "experiments/c3-real-stack/results/runs/c3main-glm-5.3-flash-202609261340/gnb.log",
+    "iperf3": "experiments/c3-real-stack/results/runs/c3main-glm-5.3-flash-202609261340/iperf3.json",
+    "records": "experiments/c3-real-stack/results/runs/c3main-glm-5.3-flash-202609261340/records.jsonl",
+    "xapp": "experiments/c3-real-stack/results/runs/c3main-glm-5.3-flash-202609261340/xapp.jsonl"
+  },
+  "status": "PASS",
+  "strict_gnb_exchanges": 30,
+  "summary": {
+    "delta_a1_s": {
+      "max_s": 0.021518230438232422,
+      "median_s": 0.01552736759185791,
+      "min_s": 0.014101743698120117,
+      "n": 30,
+      "null_count": 0
+    },
+    "delta_e2_s": {
+      "max_s": 0.006628990173339844,
+      "median_s": 0.002587437629699707,
+      "min_s": 0.0009419918060302734,
+      "n": 30,
+      "null_count": 0
+    },
+    "ell_s": {
+      "max_s": 4.8774301670491695,
+      "median_s": 1.0545138749293983,
+      "min_s": 0.6381226675584912,
+      "n": 30,
+      "null_count": 0
+    },
+    "kpm_change_upper_bound_s": {
+      "max_s": 5.407003879547119,
+      "median_s": 1.3502854108810425,
+      "min_s": 0.41040682792663574,
+      "n": 28,
+      "null_count": 2
+    }
+  },
+  "unactuatable_decisions": 0,
+  "xapp_controls": 30
+}

@@ -1,0 +1,138 @@
+{
+  "policySchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RANIntent v1 policy",
+    "description": "O-RAN A1 policy type 20001 for RANIntent v1 (EXP-2026-003); actuated in C2: action, class, scope, priority; C1-only: target_cluster, prb_share, edge_site, latency_target, duration",
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string",
+        "enum": [
+          "prioritise",
+          "deprioritise",
+          "guarantee_share",
+          "cap_share",
+          "restrict_edge",
+          "relax_edge",
+          "set_latency_target",
+          "revert_default",
+          "unsupported"
+        ]
+      },
+      "class": {
+        "type": "string",
+        "enum": [
+          "emergency_video",
+          "mission_voice",
+          "factory_control",
+          "xr_gaming",
+          "video_streaming",
+          "iot_metering",
+          "analytics_offload",
+          "best_effort"
+        ]
+      },
+      "scope": {
+        "type": "string",
+        "enum": [
+          "all_cells",
+          "north_cluster",
+          "south_cluster",
+          "stadium",
+          "hospital_zone",
+          "most_loaded_cells",
+          "worst_edge_cells",
+          "unspecified"
+        ]
+      },
+      "target_cluster": {
+        "type": "string",
+        "enum": [
+          "north_cluster",
+          "south_cluster",
+          "stadium",
+          "hospital_zone",
+          "none"
+        ]
+      },
+      "priority": {
+        "type": "string",
+        "enum": [
+          "critical",
+          "high",
+          "normal",
+          "low",
+          "unspecified"
+        ]
+      },
+      "prb_share": {
+        "type": "string",
+        "enum": [
+          "10",
+          "20",
+          "30",
+          "50",
+          "70",
+          "unspecified"
+        ]
+      },
+      "edge_site": {
+        "type": "string",
+        "enum": [
+          "on_site",
+          "metro_edge",
+          "regional_cloud",
+          "any",
+          "unspecified"
+        ]
+      },
+      "latency_target": {
+        "type": "string",
+        "enum": [
+          "5",
+          "10",
+          "20",
+          "50",
+          "100",
+          "unspecified"
+        ]
+      },
+      "duration": {
+        "type": "string",
+        "enum": [
+          "until_revoked",
+          "15min",
+          "1h",
+          "event_end",
+          "unspecified"
+        ]
+      }
+    },
+    "required": [
+      "action",
+      "class",
+      "scope",
+      "target_cluster",
+      "priority",
+      "prb_share",
+      "edge_site",
+      "latency_target",
+      "duration"
+    ],
+    "additionalProperties": false
+  },
+  "statusSchema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "RANIntent v1 policy status",
+    "type": "object",
+    "properties": {
+      "enforceStatus": {
+        "type": "string",
+        "enum": [
+          "ENFORCED",
+          "NOT_ENFORCED"
+        ]
+      }
+    }
+  }
+}

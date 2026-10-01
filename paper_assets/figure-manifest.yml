@@ -1,0 +1,558 @@
+# Provenance for every generated figure and table in the paper: generator, source data, columns, and filters.
+# Rebuild with `uv run python scripts/paper_assets.py`. `--check` rebuilds into a temporary directory and verifies that
+# every figure and table file is byte-identical to the paper (SHA-256 in expected_sha256.json). Paths are relative to
+# this file.
+
+manifest_version: 1
+project_id: "6g-jev"
+
+artifacts:
+
+  # >>> scripts/paper_assets.py: generated block; do not edit by hand
+  - artifact_id: "fig_c1_a"
+    paper_path: "figures/fig_c1_a.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/cell_count_curves.csv", "../experiments/c1-interpretation/results/h3_confirmatory.csv"]
+    columns: ["model", "quality", "n_cells", "target_cluster_state_dep_acc", "n_cases"]
+    filters: "quality=fresh"
+    plot_type: "line with 95% Wilson bands"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c1_b"
+    paper_path: "figures/fig_c1_b.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/cell_count_curves.csv", "../experiments/c1-interpretation/results/h3_confirmatory.csv"]
+    columns: ["model", "quality", "n_cells", "target_cluster_state_dep_acc", "n_cases"]
+    filters: "quality=contradictory"
+    plot_type: "line with 95% Wilson bands"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c1_c"
+    paper_path: "figures/fig_c1_c.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/cell_count_curves.csv", "../experiments/c1-interpretation/results/h3_confirmatory.csv"]
+    columns: ["model", "quality", "n_cells", "target_cluster_state_dep_acc", "n_cases"]
+    filters: "n_cells=57"
+    plot_type: "grouped bar with 95% Wilson intervals"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c1_d"
+    paper_path: "figures/fig_c1_d.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/ledger-latency", "../data/ranbench/ranintent-v1", "../experiments/c1-interpretation/results/c1_latency_cdf_summary.csv"]
+    columns: ["model", "condition", "case_id", "latency_s"]
+    filters: "primary rows pooled over all 16 conditions"
+    plot_type: "empirical CDF line (log-x)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c1_legend"
+    paper_path: "figures/fig_c1_legend.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c1"
+    paper_path: "figures/fig_c1.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_rq3_a"
+    paper_path: "figures/fig_rq3_a.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/rq3-load/rq3_load.csv"]
+    columns: ["model", "rate_per_s", "share_enforced_within_1s"]
+    filters: "all 28 primary cells"
+    plot_type: "line"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_rq3_b"
+    paper_path: "figures/fig_rq3_b.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/rq3-load/rq3_load.csv"]
+    columns: ["model", "rate_per_s", "rho", "non_stationary"]
+    filters: "all 28 primary cells; hollow when rho>1"
+    plot_type: "line with hollow non-stationary markers"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_rq3_c"
+    paper_path: "figures/fig_rq3_c.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/rq3-load/rq3_load.csv"]
+    columns: ["model", "rate_per_s", "queue_wait_p95_s"]
+    filters: "all 28 primary cells"
+    plot_type: "line (log-y)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_rq3_d"
+    paper_path: "figures/fig_rq3_d.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/rq3-load/rq3_trace_latency_summary.csv"]
+    columns: ["model", "rate_per_s", "ell_median_s", "latency_field"]
+    filters: "all 28 primary traces; latency_field=latency_s"
+    plot_type: "line"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_rq3_legend"
+    paper_path: "figures/fig_rq3_legend.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_rq3"
+    paper_path: "figures/fig_rq3.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c3_a"
+    paper_path: "figures/fig_c3_a.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c3-real-stack/results/c3_path_samples.csv"]
+    columns: ["model", "ell_s", "source_records", "source_record_row"]
+    filters: "30 record rows per interpreter"
+    plot_type: "box plot (log-y)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c3_b"
+    paper_path: "figures/fig_c3_b.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c3-real-stack/results/c3_path_samples.csv"]
+    columns: ["model", "delta_a1_ms", "delta_e2_ms", "source_records", "source_record_row"]
+    filters: "null component samples dropped"
+    plot_type: "paired box plot"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c3_legend"
+    paper_path: "figures/fig_c3_legend.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c3"
+    paper_path: "figures/fig_c3.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure wrapper"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c1"
+    paper_path: "tables/tab_c1.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/cell_count_curves.csv", "../experiments/c1-interpretation/results/h3_confirmatory.csv", "../experiments/c1-interpretation/results/exploratory_contrasts.csv", "../experiments/c1-interpretation/results/quality_and_cost.csv", "../experiments/c1-interpretation/results/near_rt_feasibility.csv"]
+    columns: ["target_cluster_state_dep_acc", "delta_c3_minus_c57", "ci_low", "ci_high", "full_policy_match", "schema_valid_rate", "unsafe_policy_rate", "phi", "latency_p50", "latency_p95"]
+    filters: "four telemetry-quality groups; all seven interpreters; c57 metric rows"
+    plot_type: "table* (28 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c1_cost"
+    paper_path: "tables/tab_c1_cost.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/quality_and_cost.csv"]
+    columns: ["mean_input_tokens", "mean_output_tokens", "cost_per_1000_correct_usd", "energy_j_per_decision"]
+    filters: "c3_fresh and c57_fresh; all seven interpreters"
+    plot_type: "table* (7 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_rq3"
+    paper_path: "tables/tab_rq3.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c1-interpretation/results/rq3-load/rq3_load.csv", "../experiments/c1-interpretation/results/rq3-load/rq3_trace_latency_summary.csv"]
+    columns: ["n", "share_enforced_within_1s", "rho", "non_stationary", "queue_wait_p50_s", "queue_wait_p95_s", "queue_wait_p99_s", "ell_median_s", "ell_p95_s", "latency_field"]
+    filters: "four offered-rate groups; all seven interpreters; latency_field=latency_s"
+    plot_type: "table* (28 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c3"
+    paper_path: "tables/tab_c3.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c3-real-stack/results/c3_path_decomposition.csv"]
+    columns: ["model", "deployment", "ell_median_s", "ell_p95_s", "delta_a1_median_ms", "delta_a1_p95_ms", "delta_e2_median_ms", "delta_e2_p95_ms", "kpm_upper_bound_median_s", "kpm_upper_bound_p95_s", "n"]
+    filters: "all seven C3 main runs"
+    plot_type: "table* (7 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_h1_a"
+    paper_path: "figures/fig_c2_h1_a.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/rq1_modes.csv"]
+    columns: ["interpreter", "mode", "affected_point", "affected_ci_low", "affected_ci_high"]
+    filters: "design_point=dp_r0p3_s30_u5; L arms; modes E, P-1, P-10"
+    plot_type: "grouped bar with primary-B 95% intervals"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_h1_b"
+    paper_path: "figures/fig_c2_h1_b.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/rq1_modes.csv"]
+    columns: ["interpreter", "mode", "network_point", "network_ci_low", "network_ci_high"]
+    filters: "design_point=dp_r0p3_s30_u5; L arms; modes E, P-1, P-10"
+    plot_type: "grouped bar with primary-B 95% intervals"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_h1_c"
+    paper_path: "figures/fig_c2_h1_c.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/l_arm_contrasts.csv"]
+    columns: ["interpreter", "comparator", "affected_gap_point", "affected_gap_ci_low", "affected_gap_ci_high", "affected_gap_resolved_both", "network_gap_point", "network_gap_ci_low", "network_gap_ci_high", "network_gap_resolved_both"]
+    filters: "design_point=dp_r0p3_s30_u5; four H1 challengers"
+    plot_type: "grouped bar with primary-B 95% intervals and resolved marks"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_h1_d"
+    paper_path: "figures/fig_c2_h1_d.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/radio_kpis.csv"]
+    columns: ["interpreter", "mode", "arm", "throughput_p5_mbps"]
+    filters: "design_point=dp_r0p3_s30_u5; arm=L; modes E, P-1, P-10"
+    plot_type: "grouped bar"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_h1_legend"
+    paper_path: "figures/fig_c2_h1_legend.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_h1"
+    paper_path: "figures/fig_c2_h1.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_grid_a"
+    paper_path: "figures/fig_c2_grid_a.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/l_arm_contrasts.csv", "../experiments/c2-closed-loop/results/analysis/controls.csv"]
+    columns: ["interpreter", "rate_per_s", "speed_kmh", "affected_point", "affected_ci_low", "affected_ci_high", "eligible_d10"]
+    filters: "rate_per_s=0.1; RQ2 grid; mode E; L arms"
+    plot_type: "line with primary-B 95% error bars; hollow = ineligible point"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_grid_b"
+    paper_path: "figures/fig_c2_grid_b.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/l_arm_contrasts.csv", "../experiments/c2-closed-loop/results/analysis/controls.csv"]
+    columns: ["interpreter", "rate_per_s", "speed_kmh", "affected_point", "affected_ci_low", "affected_ci_high", "eligible_d10"]
+    filters: "rate_per_s=0.3; RQ2 grid; mode E; L arms"
+    plot_type: "line with primary-B 95% error bars; hollow = ineligible point"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_grid_c"
+    paper_path: "figures/fig_c2_grid_c.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/l_arm_contrasts.csv", "../experiments/c2-closed-loop/results/analysis/controls.csv"]
+    columns: ["interpreter", "rate_per_s", "speed_kmh", "affected_point", "affected_ci_low", "affected_ci_high", "eligible_d10"]
+    filters: "rate_per_s=1; RQ2 grid; mode E; L arms"
+    plot_type: "line with primary-B 95% error bars; hollow = ineligible point"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_grid_d"
+    paper_path: "figures/fig_c2_grid_d.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/c2_h2_summary.csv", "../experiments/c2-closed-loop/results/analysis/hypotheses.json"]
+    columns: ["challenger", "anchor", "share_resolved", "n_reversed_resolved", "n_points", "n_eligible"]
+    filters: "rule=primary_d10"
+    plot_type: "bar with 0.8 reference"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_grid_legend"
+    paper_path: "figures/fig_c2_grid_legend.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_grid"
+    paper_path: "figures/fig_c2_grid.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_an_a"
+    paper_path: "figures/fig_c2_an_a.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/an_decomposition.csv"]
+    columns: ["interpreter", "n_minus_l_point", "n_minus_l_ci_low", "n_minus_l_ci_high", "n_minus_l_resolved_both"]
+    filters: "design_point=dp_r0p3_s30_u5; outcome=affected_class_W2"
+    plot_type: "bar with primary-B 95% intervals and resolved marks"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_an_b"
+    paper_path: "figures/fig_c2_an_b.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/an_decomposition.csv"]
+    columns: ["interpreter", "n_minus_a_point", "n_minus_a_ci_low", "n_minus_a_ci_high", "n_minus_a_resolved_both"]
+    filters: "design_point=dp_r0p3_s30_u5; outcome=affected_class_W2"
+    plot_type: "bar with primary-B 95% intervals and resolved marks"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_an_legend"
+    paper_path: "figures/fig_c2_an_legend.pdf"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "fig_c2_an"
+    paper_path: "figures/fig_c2_an.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure wrapper"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c2_h1"
+    paper_path: "tables/tab_c2_h1.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/rq1_modes.csv", "../experiments/c2-closed-loop/results/analysis/l_arm_contrasts.csv", "../experiments/c2-closed-loop/results/analysis/controls.csv"]
+    columns: ["affected_point", "affected_ci_low", "affected_ci_high", "network_point", "network_ci_low", "network_ci_high", "affected_gap_point", "affected_gap_p_holm", "affected_gap_p_holm_10s", "affected_gap_resolved_both", "network_gap_point", "network_gap_p_holm", "network_gap_p_holm_10s", "network_gap_resolved_both", "block_s", "n_blocks", "n_blocks_10s"]
+    filters: "design_point=dp_r0p3_s30_u5; L arms; two metric groups; all seven interpreters"
+    plot_type: "table* (14 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c2_grid"
+    paper_path: "tables/tab_c2_grid.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/l_arm_contrasts.csv", "../experiments/c2-closed-loop/results/analysis/controls.csv", "../experiments/c2-closed-loop/results/analysis/runs.csv"]
+    columns: ["affected_point", "network_point", "affected_gap_point", "affected_gap_ci_low", "affected_gap_ci_high", "affected_gap_resolved_both", "network_gap_point", "network_gap_ci_low", "network_gap_ci_high", "network_gap_resolved_both", "n_blocks", "n_blocks_10s", "eligible_d10"]
+    filters: "nine RQ2 design points; mode E; L arms; six rate-metric groups; all seven interpreters"
+    plot_type: "table* (42 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c2_radio"
+    paper_path: "tables/tab_c2_radio.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/radio_kpis.csv", "../experiments/c2-closed-loop/results/analysis/runs.csv"]
+    columns: ["throughput_p5_mbps", "delay_p95_ms", "handover_rate_per_ue_s", "handover_total_time_p95_ms", "rlf_count", "stale_exposure_ue_s_per_intent"]
+    filters: "ten design points; mode=E; arm=L; six KPI groups; all seven interpreters"
+    plot_type: "table* (42 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c2_controls"
+    paper_path: "tables/tab_c2_controls.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/controls.csv", "../experiments/c2-closed-loop/results/analysis/runs.csv"]
+    columns: ["c1_point", "c1_ci_low", "c1_ci_high", "c1_resolved_both", "c2_point", "c2_ci_low", "c2_ci_high", "c2_resolved_both", "c2_mean_fixed_0p1", "c2_mean_fixed_1", "c2_mean_fixed_5", "c2_monotone", "tau_s", "block_s", "n_blocks", "n_blocks_10s", "eligible_d10", "eligible_original_5pp_d10"]
+    filters: "ten design points"
+    plot_type: "table* (10 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c2_rq5"
+    paper_path: "tables/tab_c2_rq5.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/rq5.csv"]
+    columns: ["affected_a_point", "affected_b_point", "affected_c_point", "network_a_point", "network_b_point", "network_c_point", "affected_b_minus_a_point", "affected_b_minus_a_ci_low", "affected_b_minus_a_ci_high", "affected_b_minus_c_point", "affected_b_minus_c_ci_low", "affected_b_minus_c_ci_high", "network_b_minus_a_point", "network_b_minus_a_ci_low", "network_b_minus_a_ci_high", "network_b_minus_c_point", "network_b_minus_c_ci_low", "network_b_minus_c_ci_high", "throughput_mean_mbps_a", "throughput_mean_mbps_b", "throughput_mean_mbps_c", "jain_video_a", "jain_video_b", "jain_video_c", "jain_xr_a", "jain_xr_b", "jain_xr_c", "jain_iot_a", "jain_iot_b", "jain_iot_c", "jain_be_a", "jain_be_b", "jain_be_c", "block_s", "n_blocks", "n_blocks_10s"]
+    filters: "design_point=dp_r0p3_s30_u5; seven outcome groups; all seven interpreters"
+    plot_type: "table* (49 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  - artifact_id: "tab_c2_rq3"
+    paper_path: "tables/tab_c2_rq3.tex"
+    experiment_id: "EXP-2026-003"
+    run_id: ""
+    source_data: ["../experiments/c2-closed-loop/results/analysis/rq3_radio.csv", "../experiments/c2-closed-loop/results/analysis/runs.csv"]
+    columns: ["network_point", "network_ci_low", "network_ci_high", "affected_point", "affected_ci_low", "affected_ci_high", "prb_util_mean", "non_stationary", "block_inference"]
+    filters: "RQ3 replays: rates 0.1/0.5/1/2 at 5 UEs per cell and 1 at 20 UEs per cell; three metric groups; all seven interpreters"
+    plot_type: "table* (21 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: ""
+    paper_git_sha: ""
+    status: "draft"
+
+  # <<< scripts/paper_assets.py

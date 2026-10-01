@@ -1,0 +1,72 @@
+{
+  "_doc": "C2 default configuration (EXP-2026-003). PHY/antenna defaults follow the 3GPP calibration example's DenseA settings (cttc-nr-3gpp-calibration.cc) except ISD (500 m, fixed by the design) and shadowing (off, see enable_shadowing). Traffic rates and targets are placeholders for the pilot to recalibrate.",
+  "scenario": {
+    "name": "UMa",
+    "num_cells": 21,
+    "isd_m": 500.0,
+    "bs_height_m": 25.0,
+    "ut_height_m": 1.5,
+    "min_bs_ut_distance_m": 10.0,
+    "carrier_freq_hz": 4000000000.0,
+    "bandwidth_mhz": 10,
+    "numerology": 0,
+    "gnb_tx_power_dbm": 41.0,
+    "ue_tx_power_dbm": 23.0,
+    "gnb_noise_figure_db": 5.0,
+    "ue_noise_figure_db": 7.0,
+    "gnb_antenna_rows": 4,
+    "gnb_antenna_cols": 8,
+    "gnb_h_spacing": 0.5,
+    "gnb_v_spacing": 0.8,
+    "gnb_downtilt_deg": 0.0,
+    "beamforming_periodicity_ms": 100,
+    "enable_fading": true,
+    "enable_shadowing": false,
+    "rlc_max_tx_buffer_bytes": 1000000,
+    "tdd_pattern": "DL|DL|DL|S|UL|DL|DL|DL|S|UL|",
+    "_notes": "Fading = TR 38.901 ThreeGpp spectrum model; it is also what applies the sector antenna pattern in 5G-LENA, so it cannot be turned off in the 21-cell layout without losing sectorisation. Shadowing is off because ThreeGppPropagationLossModel draws a new shadowing sample on every pathloss evaluation, whose count depends on scheduled transmissions (would break C-4). Reuse-1 on one carrier (calibrationConf NR sets freqScenario=1, overlapping). TDD pattern DDDSU instead of the calibration default all-F: with F slots 5G-LENA v5.1 aborts (nr-spectrum-phy.cc:1244 'gNB transmission overlaps in time with UE transmission') when a UE, after HandoverStart has switched its PHY to the target cell, still sends a UL data TB granted by the source cell while the target gNB is transmitting DL in the same F slot. With DL/UL slots common to all cells, such a stale TB lands in a UL slot where every gNB receives."
+  },
+  "ues": {
+    "ues_per_cell": 5,
+    "speed_kmh": 30.0,
+    "a3_hysteresis_db": 1.5,
+    "a3_time_to_trigger_ms": 128,
+    "handover_triggering_delay_ms": 40,
+    "handover_joining_timeout_ms": 500,
+    "initial_attach": "closest",
+    "_notes": "Drop: HexagonalGridScenarioHelper sector mode (uniform in a disc of radius R*sqrt(3)/2 - min_bs_ut_distance around each sector-hexagon centre, R = ISD/3), UE i in cell (i mod 21)+1. Mobility: ns3::RandomDirection2dMobilityModel, Pause 0, Bounds = the helper's layout box (site extent +/- ISD), written to streams.json. handover_joining_timeout_ms = 500 (LENA default 200, set equal to LENA's HandoverLeavingTimeoutDuration default 500): when the handover command is delayed at the source for more than the joining timeout, the target drops the context but the UE still completes the handover (UE-side HandoverEndOk) and is left connected with no bearer at the target, receiving nothing for the rest of the run; probe runs: 6-9 of 105 UEs dead at 3-5 s with 200 ms, 0 and 2 with 500 ms (logs-c2/probe/E*). initial_attach = closest: AttachToMaxRsrpGnb aborted one of two probe runs ('Cannot TX while RX', nr-spectrum-phy.cc:838)."
+  },
+  "traffic": {
+    "start_time_s": 0.2,
+    "start_jitter_ms": 20.0,
+    "classes": {
+      "video": {"type": "cbr", "rate_kbps": 6000, "packet_size": 1300, "target_type": "throughput_floor_kbps", "target_value": 5000.0},
+      "xr": {"type": "cbr", "rate_kbps": 2000, "packet_size": 250, "target_type": "delay_p95_ms", "target_value": 20.0},
+      "iot": {"type": "periodic", "rate_kbps": 100, "packet_size": 125, "target_type": "throughput_floor_kbps", "target_value": 80.0},
+      "be": {"type": "backlogged", "rate_kbps": 40000, "packet_size": 1400, "target_type": "throughput_floor_kbps", "target_value": 10000.0}
+    }
+  },
+  "clusters": {
+    "_rule": "Cell c belongs to site floor((c-1)/3); site 0 is the centre (azimuth 0), ring sites 1..6 sit at azimuth 30,90,150,210,270,330 deg at distance ISD. stadium = site 0. hospital_zone = the two ring sites east of the centre (azimuth 30 and 330, x > 0 and |y| < ISD). The remaining four ring sites split by the sign of y: north_cluster = y > 0 (azimuth 90, 150), south_cluster = y < 0 (azimuth 210, 270). all_cells = 1..21. Positions are written to cells.csv on every run.",
+    "stadium": [1, 2, 3],
+    "north_cluster": [7, 8, 9, 10, 11, 12],
+    "south_cluster": [13, 14, 15, 16, 17, 18],
+    "hospital_zone": [4, 5, 6, 19, 20, 21],
+    "all_cells": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+  },
+  "priorities": {
+    "levels": {"critical": 10, "high": 30, "normal": 50, "low": 70},
+    "default_policy": "normal"
+  },
+  "xapp": {
+    "enabled": true,
+    "interval_s": 1.0,
+    "step": 2,
+    "margin": 0.10,
+    "band": 10
+  },
+  "simulation": {
+    "sim_time_s": 20.0,
+    "rng_seed": 1
+  }
+}

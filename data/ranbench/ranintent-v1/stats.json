@@ -1,0 +1,422 @@
+{
+  "token_encoding": "cl100k_base",
+  "laya_context_tokens": 1024,
+  "conditions": {
+    "c3_fresh": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 117.0,
+          "p95": 118.0,
+          "max": 118
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 117.0,
+          "p95": 118.0,
+          "max": 118
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c3_stale": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 273.0,
+          "p95": 275.0,
+          "max": 275
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.76,
+        "state_dependent_rules_ignored_wrong_share": 0.76
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 273.0,
+          "p95": 275.0,
+          "max": 275
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.7333333333333333,
+        "state_dependent_rules_ignored_wrong_share": 0.7333333333333333
+      }
+    },
+    "c3_noisy": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 157.0,
+          "p95": 158.0,
+          "max": 158
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 157.0,
+          "p95": 158.0,
+          "max": 158
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c3_contradictory": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 208.0,
+          "p95": 210.0,
+          "max": 210
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.82,
+        "state_dependent_rules_ignored_wrong_share": 0.82
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 208.0,
+          "p95": 210.0,
+          "max": 210
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.8,
+        "state_dependent_rules_ignored_wrong_share": 0.8
+      }
+    },
+    "c7_fresh": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 208.0,
+          "p95": 209.0,
+          "max": 209
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 208.0,
+          "p95": 209.0,
+          "max": 209
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c7_stale": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 567.0,
+          "p95": 569.0,
+          "max": 569
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.8,
+        "state_dependent_rules_ignored_wrong_share": 0.8
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 567.0,
+          "p95": 569.0,
+          "max": 569
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.8666666666666667,
+        "state_dependent_rules_ignored_wrong_share": 0.8666666666666667
+      }
+    },
+    "c7_noisy": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 248.0,
+          "p95": 249.0,
+          "max": 249
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 248.0,
+          "p95": 249.0,
+          "max": 249
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c7_contradictory": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 418.0,
+          "p95": 420.0,
+          "max": 420
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.86,
+        "state_dependent_rules_ignored_wrong_share": 0.86
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 418.0,
+          "p95": 420.0,
+          "max": 420
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.7666666666666667,
+        "state_dependent_rules_ignored_wrong_share": 0.7666666666666667
+      }
+    },
+    "c21_fresh": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 527.0,
+          "p95": 527.0,
+          "max": 527
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 527.0,
+          "p95": 527.0,
+          "max": 527
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c21_stale": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 1597.0,
+          "p95": 1597.0,
+          "max": 1597
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.9066666666666666,
+        "state_dependent_rules_ignored_wrong_share": 0.9066666666666666
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 1597.0,
+          "p95": 1597.0,
+          "max": 1597
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.8333333333333334,
+        "state_dependent_rules_ignored_wrong_share": 0.8333333333333334
+      }
+    },
+    "c21_noisy": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 567.0,
+          "p95": 567.0,
+          "max": 567
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 567.0,
+          "p95": 567.0,
+          "max": 567
+        },
+        "share_telemetry_over_laya_context": 0.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c21_contradictory": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 1154.0,
+          "p95": 1154.0,
+          "max": 1154
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.7933333333333333,
+        "state_dependent_rules_ignored_wrong_share": 0.7933333333333333
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 1154.0,
+          "p95": 1154.0,
+          "max": 1154
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.8,
+        "state_dependent_rules_ignored_wrong_share": 0.8
+      }
+    },
+    "c57_fresh": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 1346.0,
+          "p95": 1346.0,
+          "max": 1346
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 1346.0,
+          "p95": 1346.0,
+          "max": 1346
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c57_stale": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 4243.0,
+          "p95": 4243.0,
+          "max": 4243
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.8333333333333334,
+        "state_dependent_rules_ignored_wrong_share": 0.8333333333333334
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 4243.0,
+          "p95": 4243.0,
+          "max": 4243
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.8333333333333334,
+        "state_dependent_rules_ignored_wrong_share": 0.8333333333333334
+      }
+    },
+    "c57_noisy": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 1386.0,
+          "p95": 1386.0,
+          "max": 1386
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 1386.0,
+          "p95": 1386.0,
+          "max": 1386
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.0,
+        "state_dependent_rules_ignored_wrong_share": 0.0
+      }
+    },
+    "c57_contradictory": {
+      "test": {
+        "n": 300,
+        "telemetry_tokens": {
+          "p50": 3044.0,
+          "p95": 3044.0,
+          "max": 3044
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 150,
+        "state_dependent_decoy_share": 0.7933333333333333,
+        "state_dependent_rules_ignored_wrong_share": 0.7933333333333333
+      },
+      "dev": {
+        "n": 60,
+        "telemetry_tokens": {
+          "p50": 3044.0,
+          "p95": 3044.0,
+          "max": 3044
+        },
+        "share_telemetry_over_laya_context": 1.0,
+        "state_dependent_n": 30,
+        "state_dependent_decoy_share": 0.8333333333333334,
+        "state_dependent_rules_ignored_wrong_share": 0.8333333333333334
+      }
+    }
+  }
+}
