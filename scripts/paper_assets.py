@@ -1307,9 +1307,6 @@ C2_PLATFORM = {
     "70abfed6": "M4", "32976335": "M4", "4d46bc2e": "M4",         # production, D-11 (d7b), RQ5 build
     "a59ba72a": "L40",                                            # production (rate-1 design points)
 }
-# D-17: every RQ3 radio cell of a rate runs on that rate's platform; D-18 moved the 0.1/s row to the M4.
-C2_RQ3_PLATFORM = {(0.1, 5): "M4", (0.5, 5): "cluster-A", (1.0, 5): "cluster-A", (2.0, 5): "cluster-A",
-                   (1.0, 20): "cluster-B"}
 
 
 C2_RQ3_CELLS = ((0.1, 5), (0.5, 5), (1.0, 5), (2.0, 5), (1.0, 20))  # (intents/s, UEs per cell); last = scale point
@@ -1533,15 +1530,6 @@ class C2Data:
             if self.find(self.radio, design_point=point, interpreter="control", mode="E", arm=arm) is not None:
                 return self.run_platform(point, "control", arm)
         raise ValueError(f"C2 {point}: no oracle or no-update run fixes the reference binary")
-
-    def split(self, point: str, *runs: tuple[str, str]) -> bool:
-        """The runs of one contrast are on different platforms, so the contrast is not shown (D-17)."""
-        return len({self.run_platform(point, interpreter, arm) for interpreter, arm in runs}) > 1
-
-    def mixed(self, point: str, *runs: tuple[str, str]) -> bool:
-        """D-17: some (interpreter, arm) run of this cell is on another platform than the point's reference."""
-        reference = self.reference_platform(point)
-        return any(self.run_platform(point, interpreter, arm) != reference for interpreter, arm in runs)
 
     def control(self, point: str) -> pd.Series | None:
         return self.find(self.controls, design_point=point)
@@ -1853,13 +1841,6 @@ def c2_gap_cell(row: pd.Series | None, prefix: str, model: str, pending: bool = 
     return TableCell(tex_signed(value), None, tex_interval(*c2_interval(row, prefix)) + mark)
 
 
-def mark_mixed(cell: TableCell, flag: bool) -> TableCell:
-    """D-17: a level from another platform than the rest of its design point stays out of the best-value ranking."""
-    if flag and not cell.pending:
-        cell.value = None
-    return cell
-
-
 def c2_level_cell(row: pd.Series | None, prefix: str, with_interval: bool, pending: bool = False) -> TableCell:
     if pending:
         return pending_cell()
@@ -1950,11 +1931,6 @@ def tab_c2_grid(c2: C2Data, out: Out) -> None:
                     pending = c2.pending("l", point, model)
                     level = c2_level_cell(row, metric, False, pending)
                     gap = c2_gap_cell(row, f"{metric}_gap", model, pending, c2.holm_pending(point, model, metric))
-                    if row is not None:  # the level uses the model's L run; its gap also the anchor's
-                        level_mixed = c2.mixed(point, (model, "L"))
-                        mark_mixed(level, level_mixed)
-                        if model in H1_ANCHOR and c2.split(point, (model, "L"), (H1_ANCHOR[model], "L")):
-                            gap = TableCell("--")
                     cells += [level, gap]
                 rows.append((model, cells))
             mark_best(rows, ["min", None] * len(C2_SPEEDS))
@@ -1968,7 +1944,7 @@ def tab_c2_grid(c2: C2Data, out: Out) -> None:
         name="tab_c2_grid",
         caption=("Latency-only SLA violation at $W=2$~s in mode E over the RQ2 rate-by-speed grid, with each "
                  "challenger's gap to the baseline of its deployment class, \\jev{} for the hosted LLMs and \\semif{} for "
-                 "\\qwenjson{}. Baseline rows and unpaired cells carry no gap. Affected-class gaps at eligible points form "
+                 "\\qwenjson{}. Baseline and unpaired rows carry no gap. Affected-class gaps at eligible points form "
                  "the H2 family, and network-wide gaps on the grid are descriptive."),
         colspec="l" + "rr" * len(C2_SPEEDS), header=header, blocks=blocks,
         source="l_arm_contrasts.csv + controls.csv", tabcolsep="3pt", size=r"\footnotesize",
@@ -2016,9 +1992,7 @@ def tab_c2_radio(c2: C2Data, out: Out) -> None:
                     cells.append(pending_cell())  # the platform comparison waits for the point's absent controls
                     continue
                 value = c2_value(c2.radio_row(point, model, "E"), column, scale)
-                cell = TableCell(tex_float(value, digits), value if math.isfinite(value) else None)
-                mixed = c2.mixed(point, (model, "L"))
-                cells.append(mark_mixed(cell, mixed))
+                cells.append(TableCell(tex_float(value, digits), value if math.isfinite(value) else None))
             rows.append((model, cells))
         mark_best(rows, [direction] * len(points))
         blocks.append((title, rows))
@@ -2059,26 +2033,17 @@ def tab_c2_controls(c2: C2Data, out: Out) -> None:
         c1_mark = r"$^{\ast}$" if is_true(row["c1_resolved_both"]) else ""
         c2_mark = r"$^{\ast}$" if is_true(row["c2_resolved_both"]) else ""
         means = [c2_value(row, f"c2_mean_fixed_{tag}") for tag in ("0p1", "1", "5")]
-        mix = lambda *arms: c2.mixed(point, *(("control", arm) for arm in arms))
-        fixed = ("fixed-0.1", "fixed-1", "fixed-5")
-        # source runs of each column: C-1, C-2, d=0.1/1/5, monotone, then tau, B, blocks, eligibility (all five)
-        flags = [mix("no-update"), mix(*fixed), *[mix(arm) for arm in fixed], mix(*fixed),
-                 *[mix("no-update", *fixed)] * 5]
-        c1_split = c2.split(point, ("control", "no-update"), ("control", "oracle"))
-        c2_split = c2.split(point, *(("control", arm) for arm in fixed))
-        rows.append((labels[point], [mark_mixed(cell, flag) for cell, flag in zip([
-            TableCell("--") if c1_split else
+        rows.append((labels[point], [
             TableCell(tex_signed(c2_value(row, "c1_point")), None, tex_interval(*c2_interval(row, "c1")) + c1_mark),
-            TableCell("--") if c2_split else
             TableCell(tex_signed(c2_value(row, "c2_point")), None, tex_interval(*c2_interval(row, "c2")) + c2_mark),
             *[TableCell(tex_float(value, 2)) for value in means],
-            TableCell("--") if c2_split else TableCell(yes_no(is_true(row["c2_monotone"]))),
+            TableCell(yes_no(is_true(row["c2_monotone"]))),
             TableCell(tex_float(row["tau_s"], 1)),
             TableCell(tex_float(row["block_s"], 1)),
             TableCell(c2_blocks_text(row)),
             TableCell(yes_no(is_true(row["eligible_d10"]))),
             TableCell(yes_no(is_true(row["eligible_original_5pp_d10"]))),
-        ], flags, strict=True)]))
+        ]))
     header = table_header([
         "Design point", "C-1 [95\\% CI]|(pp)", "C-2 [95\\% CI]|(pp)", "$d=0.1$ s|(\\%)", "$d=1$ s|(\\%)",
         "$d=5$ s|(\\%)", "Mono-|tone", "$\\tau$|(s)", "$B$|(s)", "$n_B/n_{10}$|blocks", "Eligible|C-1 $>0$",
@@ -2092,7 +2057,6 @@ def tab_c2_controls(c2: C2Data, out: Out) -> None:
         tabcolsep="3pt", size=r"\footnotesize",
         note=(r"$^{\ast}$Resolved under both the primary block length and the 10~s sensitivity blocking."
               + r" The $d$ columns are point estimates for the C-2 monotonicity check and carry no interval."
-              + r" A dash marks a contrast whose arms are not paired."
               ),
     )
     out.write_table("tab_c2_controls.tex", text)
@@ -2195,8 +2159,7 @@ def tab_c2_rq3(c2: C2Data, out: Out) -> None:
                 suffix = tex_interval(*c2_interval(row, column)) if is_sla else ""
                 cell = TableCell(tex_float(value, 2), value if math.isfinite(value) and not flagged else None,
                                  suffix + (r"$^{\dagger}$" if flagged else ""))  # flagged: not ranked
-                mixed = row is not None and c2.platform[str(row["run_id"])] != C2_RQ3_PLATFORM[(rate, ues)]
-                cells.append(mark_mixed(cell, mixed))
+                cells.append(cell)
             rows.append((model, cells))
         mark_best(rows, ["min" if is_sla else None] * len(C2_RQ3_CELLS))
         blocks.append((title, rows))

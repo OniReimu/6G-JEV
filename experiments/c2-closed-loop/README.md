@@ -173,7 +173,9 @@ Code comments refer to these by their identifiers.
 
 - **D-4. Full fidelity on several platforms.** No configuration-level cost cuts were made. The 24 h walltime and the
   core-hour cap were replaced by runs on four platforms. Builds of the same source on different compilers or CPU types
-  give different trajectories, so every arm and control of a design point runs on one binary of one platform.
+  give different trajectories, so every arm and control of a design point runs on one binary of one platform. The
+  exceptions are reruns of aborted arms (D-7, D-11): at 0.1 intents/s and 60 or 120 km/h, three runs each finished
+  on the M4 while the rest of the point ran on cluster-B.
 - **D-5. Control C-1 on the affected class.** One intent changes one class in one cluster, so a network-wide C-1 of
   5 pp is out of reach by construction. C-1 and C-2 are measured on the affected class of the intents that actually
   change an SLA class's priority. Network-wide controls stay in the report.
@@ -207,7 +209,8 @@ Code comments refer to these by their identifiers.
   are eligible.
 - **D-17. Platform level shift.** For identical inputs, the base-point oracle's network-wide SLA violation differs by
   2.65 pp between the x86-64 gcc and the arm64 clang builds. RQ3 cells of one rate therefore all run on one platform,
-  RQ5 compares arm (b) with references on the same build, and a table symbol marks every cell that mixes platforms.
+  and RQ5 compares arm (b) with references on the same build. The paper's tables report every completed run,
+  including the cells and contrasts at the two design points above whose runs come from two platforms.
 - **D-18. RQ3 rows on a second platform.** The 0.1 intents/s row and the 20-UE scale row also run in full on the M4
   build, and each row comes from the platform that completes all of its cells first. Rows never mix platforms.
 - The RQ5 (b) rows were run by the RQ5 controller on the base-point stream, as `results/run-matrix-rq5-stream.txt`
