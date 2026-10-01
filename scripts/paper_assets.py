@@ -876,7 +876,7 @@ def fig_rq3(data: Data, out: Out) -> None:
                  "(b) Interpretation-slot utilization is plotted against offered rate with a horizontal "
                  "$\\eta=1$ reference and hollow markers for non-stationary cells. (c) The p95 queue wait is "
                  "plotted against offered rate on a logarithmic vertical axis. (d) Median per-intent decision "
-                 "latency from the trace field \\texttt{latency\\_s} is plotted against offered rate."),
+                 "latency is plotted against offered rate."),
     )
     load_source = f"{ANALYSIS_REL}/c1-interpretation/results/rq3-load/rq3_load.csv"
     latency_source = f"{ANALYSIS_REL}/c1-interpretation/results/rq3-load/rq3_trace_latency_summary.csv"
@@ -1968,8 +1968,8 @@ def tab_c2_grid(c2: C2Data, out: Out) -> None:
         name="tab_c2_grid",
         caption=("Latency-only SLA violation at $W=2$~s in mode E over the RQ2 rate-by-speed grid, with each "
                  "challenger's gap to the baseline of its deployment class, \\jev{} for the hosted LLMs and \\semif{} for "
-                 "\\qwenjson{}. Baseline and unpaired rows carry no gap. Affected-class gaps at eligible points form the "
-                 "H2 family; network-wide gaps on the grid are descriptive."),
+                 "\\qwenjson{}. Baseline rows and unpaired cells carry no gap. Affected-class gaps at eligible points form "
+                 "the H2 family, and network-wide gaps on the grid are descriptive."),
         colspec="l" + "rr" * len(C2_SPEEDS), header=header, blocks=blocks,
         source="l_arm_contrasts.csv + controls.csv", tabcolsep="3pt", size=r"\footnotesize",
         note=("Intervals are on the paired gaps only, because all arms see identical UE positions and traffic. "
@@ -2086,12 +2086,13 @@ def tab_c2_controls(c2: C2Data, out: Out) -> None:
     ])
     text = render_big_table(
         name="tab_c2_controls",
-        caption=("Reference bounds and latency-sensitivity sweep per C2 design point: signed affected-class oracle "
-                 "headroom (C-1), fixed-latency sweep (C-2), block length and eligibility."),
+        caption=("Signed affected-class oracle headroom (C-1), fixed-latency sweep (C-2), block length, and eligibility "
+                 "per C2 design point."),
         colspec="l" + "r" * 11, header=header, blocks=[("", rows)], source="controls.csv",
         tabcolsep="3pt", size=r"\footnotesize",
         note=(r"$^{\ast}$Resolved under both the primary block length and the 10~s sensitivity blocking."
               + r" The $d$ columns are point estimates for the C-2 monotonicity check and carry no interval."
+              + r" A dash marks a contrast whose arms are not paired."
               ),
     )
     out.write_table("tab_c2_controls.tex", text)
@@ -2207,10 +2208,10 @@ def tab_c2_rq3(c2: C2Data, out: Out) -> None:
     text = render_big_table(
         name="tab_c2_rq3",
         caption=("RQ3 radio outcomes of each interpreter's load trace replayed in mode E, per offered intent rate "
-                 "at 5 UEs per cell and at the 20-UE scale point; SLA violation at $W=2$~s [95\\% CI]."),
+                 "at 5 UEs per cell and at the 20-UE scale point. SLA violation is given at $W=2$~s with its 95\\% CI."),
         colspec="l" + "r" * len(C2_RQ3_CELLS), header=header, blocks=blocks, source="rq3_radio.csv",
         tabcolsep="3pt", size=r"\footnotesize",
-        note=("Replays run without control arms, so intervals use the registered 10~s time blocks of each replay "
+        note=("Because replays run without control arms, intervals use the registered 10~s time blocks of each replay "
               "stream. PRB utilization is a whole-run mean and carries no interval. $^{\\dagger}$With $\\eta\\ge1$ the "
               "interpreter's queue does not settle, so the SLA series is non-stationary and has no valid "
               "interval."),
