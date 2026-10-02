@@ -1173,7 +1173,7 @@ def tab_c1_cost(data: Data, out: Out) -> None:
     mark_best(rows, ["min"] * 8)
     caption = ("RQ4 cost and energy per decision with fresh telemetry at 3 and 57 cells. Tokens are means per "
                "decision, fees are US dollars per 1,000 correct policies over every call of the condition, and "
-               "energy is integrated from the GPU power trace of the self-hosted job. Hosted interpreters have "
+               "energy is integrated from the GPU power trace of each self-hosted interpreter. Hosted interpreters have "
                "no power trace, and self-hosted interpreters carry no API fee.")
     header = table_header([
         "Interpreter",
